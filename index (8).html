@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rei das Chaves — Chaves codificadas, cópias e carimbos em Parauapebas</title>
+<meta name="description" content="Cópia de chaves, chaves codificadas com transponder, controles de portão e carimbos personalizados. Rua A, 529 — Cidade Nova, em frente ao CEUP. Atendimento pelo WhatsApp (94) 99182-7177." />
+<meta name="theme-color" content="#0B2545" />
+
+<!-- OpenGraph (aparece quando o link é compartilhado no WhatsApp) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Rei das Chaves — Parauapebas" />
+<meta property="og:description" content="Chave codificada, cópia na hora e carimbo sob medida. Rua A, 529 — Cidade Nova." />
+<meta property="og:image" content="og-capa.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='11' cy='16' r='7' fill='%230B2545'/><circle cx='11' cy='16' r='2.6' fill='white'/><path d='M18 14h11v4h-3v3h-3v-3h-5z' fill='%23FF6B2C'/></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:     { DEFAULT: '#0B2545', 700: '#123A63', 600: '#1B4E80' },
+          carvao:  { DEFAULT: '#22262B', 600: '#3A4048', 400: '#6B7280' },
+          laranja: { DEFAULT: '#FF6B2C', 700: '#E24F12' },
+          verde:   { DEFAULT: '#109B62', 100: '#DCF5E9' },
+          nevoa:   '#F4F6F8'
+        },
+        fontFamily: {
+          display: ['Archivo', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-tap-highlight-color: transparent; }
+  .titulo { font-family: 'Archivo', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+  :focus-visible { outline: 3px solid #FF6B2C; outline-offset: 2px; border-radius: 4px; }
+
+  /* Faixa com o perfil de uma chave — separa o topo do conteúdo */
+  .dentes { height: 14px; background-repeat: repeat-x; background-size: 28px 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M0 0h28v5H22v4h-6V5H8v6H0z' fill='%230B2545'/%3E%3C/svg%3E"); }
+
+  .campo { width: 100%; border: 1.5px solid #D9DEE4; border-radius: 10px; padding: 11px 13px; font-size: 15px; background: #fff; transition: border-color .15s; }
+  .campo:focus { border-color: #0B2545; outline: none; box-shadow: 0 0 0 3px rgba(11,37,69,.12); }
+  .rotulo { display:block; font-size: 13px; font-weight: 600; color:#3A4048; margin-bottom: 5px; }
+
+  [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
+</style>
+</head>
+
+<body class="bg-nevoa text-carvao font-sans antialiased">
+
+<!-- =========================================================
+     VISÃO DO CLIENTE
+     ========================================================= -->
+<div id="site">
+
+  <!-- Aviso de plantão -->
+  <div class="bg-ink text-white text-[13px]">
+    <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-3">
+      <p class="flex items-center gap-2"><span class="inline-block h-2 w-2 rounded-full bg-laranja"></span> Chaveiro de plantão para emergências</p>
+      <a href="tel:+5594991827177" class="font-semibold hover:text-laranja shrink-0">(94) 99182-7177</a>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 h-16 flex items-center gap-4">
+      <a href="#" class="flex items-center gap-2.5 mr-auto" aria-label="Rei das Chaves, página inicial">
+        <svg viewBox="0 0 44 32" class="h-8 w-11" aria-hidden="true">
+          <circle cx="12" cy="16" r="10" fill="#0B2545"/><circle cx="12" cy="16" r="3.6" fill="#fff"/>
+          <path d="M22 13.6h20v4.8h-4.5v4h-4v-4h-3.2v3.4h-3.8v-3.4H22z" fill="#FF6B2C"/>
+        </svg>
+        <span class="leading-none">
+          <span class="titulo block text-ink text-[17px]">REI DAS CHAVES</span>
+          <span class="block text-[11px] text-carvao-400 font-medium">Chaves · Codificadas · Carimbos</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-carvao-600">
+        <a href="#servicos" class="hover:text-ink">Serviços</a>
+        <a href="#vitrine" class="hover:text-ink">Produtos</a>
+        <a href="#carimbos" class="hover:text-ink">Monte seu carimbo</a>
+        <a href="#como" class="hover:text-ink">Como funciona</a>
+      </nav>
+
+      <button id="btn-cotacao" class="relative flex items-center gap-2 rounded-lg border-1.5 border-slate-300 border px-3 py-2 text-sm font-semibold text-ink hover:border-ink">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h2l2.2 10.4a2 2 0 0 0 2 1.6h7.4a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+        <span class="hidden sm:inline">Cotação</span>
+        <span id="badge-cotacao" class="absolute -top-1.5 -right-1.5 h-5 min-w-5 px-1 rounded-full bg-laranja text-white text-[11px] font-bold grid place-items-center" hidden>0</span>
+      </button>
+
+      <a id="wa-topo" href="#" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-laranja px-4 py-2.5 text-sm font-semibold text-white hover:bg-laranja-700">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Herói: o pedido começa aqui -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-6xl px-4 pt-12 pb-14 grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+      <div>
+        <p class="text-laranja font-semibold text-sm mb-3">Parauapebas · Cidade Nova, em frente ao CEUP</p>
+        <h1 class="titulo text-[34px] sm:text-5xl lg:text-[52px] text-white">Chave codificada, cópia na hora e carimbo sob medida.</h1>
+        <p class="mt-5 text-white/80 text-[17px] max-w-[56ch] leading-relaxed">
+          Atendemos carros, motos, casa, comércio e portão eletrônico. Manda a foto da chave no WhatsApp que a gente já responde o preço e o prazo.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a id="wa-heroi" href="#" target="_blank" rel="noopener" class="rounded-lg bg-laranja px-6 py-3.5 font-semibold text-white hover:bg-laranja-700">Falar com a loja agora</a>
+          <a href="#vitrine" class="rounded-lg border border-white/30 px-6 py-3.5 font-semibold text-white hover:bg-white/10">Ver produtos e preços</a>
+        </div>
+        <dl class="mt-9 grid grid-cols-3 gap-4 max-w-md border-t border-white/15 pt-6">
+          <div><dt class="text-white/60 text-[13px]">Cópia simples</dt><dd class="titulo text-xl text-white">5 min</dd></div>
+          <div><dt class="text-white/60 text-[13px]">Codificada</dt><dd class="titulo text-xl text-white">no dia</dd></div>
+          <div><dt class="text-white/60 text-[13px]">Carimbo</dt><dd class="titulo text-xl text-white">24h</dd></div>
+        </dl>
+      </div>
+
+      <!-- Pedido rápido -->
+      <div class="bg-white text-carvao rounded-2xl p-5 sm:p-6 shadow-xl shadow-black/20">
+        <h2 class="titulo text-xl text-ink">Pedido rápido</h2>
+        <p class="text-sm text-carvao-400 mt-1">Preencha em 20 segundos. O pedido entra na fila da loja e abre a conversa no WhatsApp.</p>
+        <form id="form-rapido" class="mt-4 space-y-3.5">
+          <div>
+            <span class="rotulo">Do que você precisa?</span>
+            <div class="grid grid-cols-2 gap-2" id="tipos-rapido"></div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div><label class="rotulo" for="r-nome">Seu nome</label><input id="r-nome" name="nome" class="campo" required placeholder="Ex.: Ana Souza" /></div>
+            <div><label class="rotulo" for="r-fone">WhatsApp</label><input id="r-fone" name="fone" class="campo" required inputmode="tel" placeholder="(94) 9 0000-0000" /></div>
+          </div>
+          <div><label class="rotulo" for="r-obs">Detalhes (modelo do carro, quantidade, texto do carimbo…)</label><textarea id="r-obs" name="obs" rows="2" class="campo" placeholder="Ex.: chave codificada Onix 2019, 1 cópia"></textarea></div>
+          <button class="w-full rounded-lg bg-ink px-5 py-3.5 font-semibold text-white hover:bg-ink-700">Enviar pedido</button>
+          <p class="text-[12px] text-carvao-400 text-center">Emergência (trancado fora do carro ou de casa)? Ligue: <a class="font-semibold text-ink underline" href="tel:+5594991827177">(94) 99182-7177</a></p>
+        </form>
+      </div>
+    </div>
+    <div class="dentes rotate-180"></div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="titulo text-3xl sm:text-4xl text-ink">O que fazemos</h2>
+    <p class="mt-2 text-carvao-600 max-w-[60ch]">Serviço de chaveiro completo e produção própria de carimbos, no balcão ou no local.</p>
+    <div id="lista-servicos" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- Vitrine -->
+  <section id="vitrine" class="bg-white border-y border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="titulo text-3xl sm:text-4xl text-ink">Produtos e serviços</h2>
+          <p class="mt-2 text-carvao-600">Monte sua lista e envie para cotação. Valores de referência — confirmamos na resposta.</p>
+        </div>
+        <div id="filtros" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div id="grade-produtos" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- Montador de carimbo -->
+  <section id="carimbos" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="titulo text-3xl sm:text-4xl text-ink">Monte seu carimbo</h2>
+    <p class="mt-2 text-carvao-600 max-w-[60ch]">Escreva o texto e veja como ele fica. Depois é só mandar para a loja — a arte final volta para sua aprovação antes de gravar.</p>
+
+    <div class="mt-8 grid lg:grid-cols-[1fr_1.1fr] gap-8 items-start">
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="rotulo" for="c-formato">Formato</label>
+            <select id="c-formato" class="campo"><option value="retangular">Retangular</option><option value="redondo">Redondo</option></select>
+          </div>
+          <div>
+            <label class="rotulo" for="c-tipo">Tipo</label>
+            <select id="c-tipo" class="campo"><option>Automático (com almofada)</option><option>Madeira</option><option>Datador automático</option></select>
+          </div>
+        </div>
+
+        <div id="campos-retangular" class="mt-4 space-y-3">
+          <div><label class="rotulo" for="c-l1">Linha 1 (destaque)</label><input id="c-l1" class="campo" maxlength="28" value="Maranhão Chaves LTDA" /></div>
+          <div><label class="rotulo" for="c-l2">Linha 2</label><input id="c-l2" class="campo" maxlength="34" value="CNPJ 00.000.000/0001-00" /></div>
+          <div><label class="rotulo" for="c-l3">Linha 3</label><input id="c-l3" class="campo" maxlength="34" value="Rua A, 529 — Cidade Nova" /></div>
+        </div>
+
+        <div id="campos-redondo" class="mt-4 space-y-3" hidden>
+          <div><label class="rotulo" for="c-topo">Texto do arco superior</label><input id="c-topo" class="campo" maxlength="30" value="MARANHÃO CHAVES" /></div>
+          <div><label class="rotulo" for="c-base">Texto do arco inferior</label><input id="c-base" class="campo" maxlength="30" value="PARAUAPEBAS · PA" /></div>
+          <div><label class="rotulo" for="c-centro">Texto central</label><input id="c-centro" class="campo" maxlength="18" value="CNPJ" /></div>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 gap-3">
+          <div>
+            <label class="rotulo" for="c-tam">Tamanho</label>
+            <select id="c-tam" class="campo"><option>38 × 14 mm</option><option selected>47 × 18 mm</option><option>58 × 22 mm</option><option>Redondo 40 mm</option></select>
+          </div>
+          <div>
+            <label class="rotulo" for="c-qtd">Quantidade</label>
+            <input id="c-qtd" type="number" min="1" max="50" value="1" class="campo" />
+          </div>
+        </div>
+
+        <button id="add-carimbo" class="mt-5 w-full rounded-lg bg-laranja px-5 py-3.5 font-semibold text-white hover:bg-laranja-700">Adicionar à cotação</button>
+      </div>
+
+      <!-- Pré-visualização -->
+      <div class="rounded-2xl bg-ink p-6 sm:p-10 grid place-items-center min-h-[300px]">
+        <div class="w-full max-w-[420px] bg-white rounded-xl p-6 shadow-2xl shadow-black/30">
+          <svg id="preview-carimbo" viewBox="0 0 400 180" class="w-full" role="img" aria-label="Pré-visualização do carimbo"></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como" class="bg-carvao text-white">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="titulo text-3xl sm:text-4xl">Como funciona o pedido</h2>
+      <ol class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="passos"></ol>
+    </div>
+  </section>
+
+  <!-- Contato / rodapé -->
+  <footer id="contato" class="bg-ink text-white">
+    <div class="dentes"></div>
+    <div class="mx-auto max-w-6xl px-4 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="sm:col-span-2">
+        <div class="flex items-center gap-2.5">
+          <svg viewBox="0 0 44 32" class="h-8 w-11" aria-hidden="true"><circle cx="12" cy="16" r="10" fill="#fff"/><circle cx="12" cy="16" r="3.6" fill="#0B2545"/><path d="M22 13.6h20v4.8h-4.5v4h-4v-4h-3.2v3.4h-3.8v-3.4H22z" fill="#FF6B2C"/></svg>
+          <span class="titulo text-lg">REI DAS CHAVES</span>
+        </div>
+        <p class="mt-4 text-white/75 max-w-[46ch] leading-relaxed">Chaves codificadas, cópias, controles de portão e carimbos personalizados. Atendimento no balcão e chaveiro no local.</p>
+        <a id="wa-rodape" href="#" target="_blank" rel="noopener" class="mt-5 inline-flex rounded-lg bg-laranja px-5 py-3 font-semibold hover:bg-laranja-700">Chamar no WhatsApp</a>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">Onde estamos</h3>
+        <address class="not-italic text-white/75 leading-relaxed text-[15px]">
+          Rua A, N° 529<br />Bairro Cidade Nova<br />Em frente ao CEUP<br />Parauapebas — PA
+        </address>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+A+529+Cidade+Nova+Parauapebas+PA" target="_blank" rel="noopener" class="mt-3 inline-block text-laranja font-semibold text-sm hover:underline">Abrir no mapa</a>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">Atendimento</h3>
+        <ul class="text-white/75 text-[15px] space-y-1.5">
+          <li>Segunda a sexta: 8h às 18h</li>
+          <li>Sábado: 8h às 13h</li>
+          <li>Emergência: plantão 24h</li>
+        </ul>
+        <a href="tel:+5594991827177" class="mt-3 inline-block font-semibold hover:text-laranja">(94) 99182-7177</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-6xl px-4 py-5 flex flex-wrap items-center justify-between gap-3 text-[13px] text-white/55">
+        <p>© <span id="ano"></span> Rei das Chaves — Parauapebas/PA</p>
+        <a href="#admin" class="hover:text-white">Área do vendedor</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a id="wa-flutuante" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+     class="fixed bottom-5 right-5 z-40 h-14 w-14 rounded-full bg-verde grid place-items-center shadow-lg shadow-black/25 hover:brightness-110">
+    <svg viewBox="0 0 24 24" class="h-7 w-7 fill-white"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>
+  </a>
+</div>
+
+<!-- Painel lateral de cotação -->
+<div id="drawer" class="fixed inset-0 z-50" hidden>
+  <div class="absolute inset-0 bg-black/50" data-fechar-drawer></div>
+  <aside class="absolute right-0 top-0 h-full w-full max-w-md bg-white flex flex-col" role="dialog" aria-modal="true" aria-label="Sua cotação">
+    <header class="flex items-center justify-between px-5 h-16 border-b border-slate-200">
+      <h2 class="titulo text-lg text-ink">Sua cotação</h2>
+      <button data-fechar-drawer class="h-9 w-9 grid place-items-center rounded-lg hover:bg-nevoa" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div id="itens-cotacao" class="flex-1 overflow-y-auto p-5 space-y-3"></div>
+    <div class="border-t border-slate-200 p-5 space-y-3">
+      <div class="flex justify-between text-sm"><span class="text-carvao-400">Estimativa</span><span id="total-cotacao" class="titulo text-xl text-ink">R$ 0,00</span></div>
+      <div class="grid grid-cols-2 gap-3">
+        <input id="q-nome" class="campo" placeholder="Seu nome" aria-label="Seu nome" />
+        <input id="q-fone" class="campo" placeholder="WhatsApp" aria-label="Seu WhatsApp" inputmode="tel" />
+      </div>
+      <button id="enviar-cotacao" class="w-full rounded-lg bg-laranja px-5 py-3.5 font-semibold text-white hover:bg-laranja-700 disabled:opacity-40" disabled>Enviar cotação</button>
+    </div>
+  </aside>
+</div>
+
+<!-- =========================================================
+     VISÃO DO VENDEDOR (ADMIN) — rota #admin
+     ========================================================= -->
+<div id="admin" class="min-h-screen bg-carvao text-white" hidden>
+
+  <!-- Login simulado -->
+  <div id="admin-login" class="min-h-screen grid place-items-center px-4">
+    <form id="form-login" class="w-full max-w-sm bg-white text-carvao rounded-2xl p-7">
+      <h1 class="titulo text-2xl text-ink">Área do vendedor</h1>
+      <p class="text-sm text-carvao-400 mt-1">Acesso restrito à equipe da loja.</p>
+      <label class="rotulo mt-5" for="senha">Senha</label>
+      <input id="senha" type="password" class="campo" autocomplete="current-password" />
+      <p id="erro-login" class="text-[13px] text-laranja-700 mt-2" hidden>Senha incorreta. Tente novamente.</p>
+      <button class="mt-4 w-full rounded-lg bg-ink px-5 py-3.5 font-semibold text-white hover:bg-ink-700">Entrar</button>
+      <p class="text-[12px] text-carvao-400 mt-4">Demonstração: a senha é <strong>chave2026</strong>. Antes de publicar, troque por uma autenticação real (ver manual).</p>
+      <a href="#" class="block text-center text-[13px] text-carvao-400 mt-3 hover:text-ink">Voltar para o site</a>
+    </form>
+  </div>
+
+  <!-- Painel -->
+  <div id="admin-painel" hidden>
+    <header class="bg-ink border-b border-white/10 sticky top-0 z-30">
+      <div class="mx-auto max-w-7xl px-4 h-16 flex items-center gap-4">
+        <span class="titulo text-lg mr-auto">Painel do vendedor</span>
+        <button id="exportar" class="hidden sm:inline rounded-lg border border-white/25 px-3.5 py-2 text-sm font-medium hover:bg-white/10">Exportar CSV</button>
+        <a href="#" class="text-sm text-white/70 hover:text-white">Ver site</a>
+        <button id="sair" class="rounded-lg bg-laranja px-3.5 py-2 text-sm font-semibold hover:bg-laranja-700">Sair</button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-8">
+      <div id="kpis" class="grid grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <input id="busca" class="campo max-w-xs text-carvao" placeholder="Buscar por nome, telefone ou nº do pedido" aria-label="Buscar pedidos" />
+        <div id="filtros-status" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="lista-pedidos" class="mt-6 space-y-3"></div>
+    </main>
+  </div>
+</div>
+
+<!-- Aviso flutuante -->
+<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] rounded-xl bg-carvao text-white px-5 py-3 text-sm font-medium shadow-xl" hidden></div>
+
+<script>
+/* =============================================================
+   1. CONFIGURAÇÃO DA LOJA — altere aqui
+   ============================================================= */
+const LOJA = {
+  nome: 'Rei das Chaves',
+  whatsapp: '5594991827177',            // com DDI 55 e DDD, só números
+  endereco: 'Rua A, N° 529 — Cidade Nova (em frente ao CEUP), Parauapebas/PA',
+  senhaAdmin: 'chave2026'               // SIMULAÇÃO. Ver manual: migrar para Supabase Auth
+};
+
+/* =============================================================
+   2. CAMADA DE DADOS
+   Hoje grava no navegador (localStorage). Para trocar por um
+   banco gratuito (Supabase), basta reescrever estas 3 funções —
+   o resto do site não muda. Instruções no MANUAL-PUBLICACAO.md
+   ============================================================= */
+const DB = {
+  CHAVE: 'reidaschaves.pedidos',
+
+  async listar() {
+    try { return JSON.parse(localStorage.getItem(this.CHAVE)) || []; }
+    catch { return []; }
+  },
+
+  async salvar(pedido) {
+    const pedidos = await this.listar();
+    pedidos.unshift(pedido);
+    localStorage.setItem(this.CHAVE, JSON.stringify(pedidos));
+    return pedido;
+  },
+
+  async atualizarStatus(id, status) {
+    const pedidos = await this.listar();
+    const p = pedidos.find(x => x.id === id);
+    if (!p) return;
+    p.status = status;
+    p.historico.push({ status, em: new Date().toISOString() });
+    localStorage.setItem(this.CHAVE, JSON.stringify(pedidos));
+  }
+};
+
+/* =============================================================
+   3. CONTEÚDO
+   ============================================================= */
+const SERVICOS = [
+  { t: 'Chave codificada', d: 'Carros e motos com transponder: cópia, cadastro e programação no veículo.', i: 'chip' },
+  { t: 'Cópia de chaves', d: 'Yale, tetra, gaveteiro, cadeado e chaves de comércio. Sai na hora.', i: 'chave' },
+  { t: 'Controle de portão', d: 'Cópia de controle, troca de bateria e programação do receptor.', i: 'controle' },
+  { t: 'Carimbos personalizados', d: 'Automáticos, de madeira e datadores. Arte aprovada antes de gravar.', i: 'carimbo' },
+  { t: 'Chaveiro emergencial', d: 'Abertura de veículo, casa e comércio sem danificar a fechadura.', i: 'sirene' },
+  { t: 'Troca de segredo', d: 'Perdeu a chave? Regravamos o segredo da fechadura e entregamos novas cópias.', i: 'cadeado' }
+];
+
+const PRODUTOS = [
+  { id:'p1', cat:'Chaves',      nome:'Cópia de chave simples',        desc:'Yale, gaveteiro ou cadeado',            preco:15  },
+  { id:'p2', cat:'Chaves',      nome:'Cópia de chave tetra',          desc:'Fechaduras reforçadas',                 preco:35  },
+  { id:'p3', cat:'Chaves',      nome:'Chave codificada com chip',     desc:'Carro ou moto, já programada',          preco:180 },
+  { id:'p4', cat:'Chaves',      nome:'Chave canivete com controle',   desc:'Corpo, lâmina e programação',           preco:320 },
+  { id:'p5', cat:'Chaves',      nome:'Controle de portão eletrônico', desc:'Cópia e programação no receptor',       preco:60  },
+  { id:'c1', cat:'Carimbos',    nome:'Carimbo automático 38 × 14 mm', desc:'Até 3 linhas, almofada inclusa',        preco:65  },
+  { id:'c2', cat:'Carimbos',    nome:'Carimbo automático 47 × 18 mm', desc:'Até 4 linhas, o mais pedido',           preco:85  },
+  { id:'c3', cat:'Carimbos',    nome:'Carimbo redondo 40 mm',         desc:'Padrão CNPJ com arcos de texto',        preco:95  },
+  { id:'c4', cat:'Carimbos',    nome:'Carimbo de madeira',            desc:'Logotipo ou assinatura gravados',       preco:55  },
+  { id:'c5', cat:'Carimbos',    nome:'Datador automático',            desc:'Data ajustável + texto fixo',           preco:120 },
+  { id:'s1', cat:'Serviços',    nome:'Abertura de veículo',           desc:'Atendimento no local, sem danos',       preco:0   },
+  { id:'s2', cat:'Serviços',    nome:'Troca de segredo de fechadura', desc:'Inclui 2 cópias novas',                 preco:0   }
+];
+
+const PASSOS = [
+  { t:'Você envia',    d:'Foto da chave ou texto do carimbo pelo WhatsApp, ou monta a cotação aqui no site.' },
+  { t:'A loja responde', d:'Preço fechado e prazo. Para carimbo, você recebe a arte para aprovar.' },
+  { t:'Produção',      d:'Chave cortada e codificada, ou carimbo gravado. Você acompanha pelo WhatsApp.' },
+  { t:'Retirada',      d:'Retire na Rua A, 529, ou combine a entrega quando for serviço no local.' }
+];
+
+const STATUS = {
+  novo:     { rotulo:'Novo',        cor:'bg-laranja text-white' },
+  orcado:   { rotulo:'Orçado',      cor:'bg-ink-600 text-white' },
+  producao: { rotulo:'Em produção', cor:'bg-amber-500 text-white' },
+  pronto:   { rotulo:'Pronto',      cor:'bg-verde text-white' },
+  entregue: { rotulo:'Entregue',    cor:'bg-slate-400 text-white' }
+};
+
+/* =============================================================
+   4. UTILITÁRIOS
+   ============================================================= */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const moeda = v => v.toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+const escapar = t => String(t).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+
+function whats(texto = '') {
+  return `https://wa.me/${LOJA.whatsapp}${texto ? '?text=' + encodeURIComponent(texto) : ''}`;
+}
+
+function avisar(msg) {
+  const el = $('#toast');
+  el.textContent = msg;
+  el.hidden = false;
+  clearTimeout(avisar._t);
+  avisar._t = setTimeout(() => el.hidden = true, 3200);
+}
+
+function novoId(qtd) {
+  return 'RC-' + String(qtd + 1).padStart(4, '0');
+}
+
+/* =============================================================
+   5. SITE DO CLIENTE
+   ============================================================= */
+$('#ano').textContent = new Date().getFullYear();
+['#wa-topo','#wa-heroi','#wa-rodape','#wa-flutuante'].forEach(s => {
+  $(s).href = whats('Olá! Vim pelo site do Rei das Chaves e preciso de um orçamento.');
+});
+
+// --- Serviços
+const ICONES = {
+  chip:'M9 3v2M15 3v2M9 19v2M15 19v2M3 9h2M3 15h2M19 9h2M19 15h2M6 6h12v12H6z',
+  chave:'M14 7a4 4 0 1 0-3.5 3.97L12 12.5l-1.5 1.5 1.5 1.5-1.5 1.5 2 2 4-4V10A4 4 0 0 0 14 7z',
+  controle:'M8 2h8v20H8zM11 6h2M11 10h2M11 14h2',
+  carimbo:'M6 21h12M8 17h8v-2a4 4 0 0 0-1.2-2.9L14 11V7a2 2 0 0 0-4 0v4l-.8 1.1A4 4 0 0 0 8 15v2z',
+  sirene:'M12 3a5 5 0 0 0-5 5v5H5v3h14v-3h-2V8a5 5 0 0 0-5-5zM10 19a2 2 0 0 0 4 0',
+  cadeado:'M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z'
+};
+$('#lista-servicos').innerHTML = SERVICOS.map(s => `
+  <article class="bg-white rounded-xl border border-slate-200 p-5 hover:border-ink transition-colors">
+    <svg viewBox="0 0 24 24" class="h-8 w-8 text-laranja" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="${ICONES[s.i]}"/></svg>
+    <h3 class="titulo text-lg text-ink mt-3">${s.t}</h3>
+    <p class="text-[15px] text-carvao-600 mt-1.5 leading-relaxed">${s.d}</p>
+  </article>`).join('');
+
+// --- Como funciona
+$('#passos').innerHTML = PASSOS.map((p, i) => `
+  <li>
+    <span class="titulo text-laranja text-2xl">${i + 1}</span>
+    <h3 class="titulo text-lg mt-1">${p.t}</h3>
+    <p class="text-white/70 text-[15px] mt-1.5 leading-relaxed">${p.d}</p>
+  </li>`).join('');
+
+// --- Pedido rápido
+const TIPOS = ['Chave codificada','Cópia de chave','Carimbo','Emergência'];
+let tipoRapido = TIPOS[0];
+$('#tipos-rapido').innerHTML = TIPOS.map(t => `
+  <button type="button" data-tipo="${t}" class="chip-tipo rounded-lg border px-3 py-2.5 text-sm font-medium text-left">${t}</button>`).join('');
+
+function pintarTipos() {
+  $$('.chip-tipo').forEach(b => {
+    const ativo = b.dataset.tipo === tipoRapido;
+    b.className = 'chip-tipo rounded-lg border px-3 py-2.5 text-sm font-medium text-left ' +
+      (ativo ? 'border-ink bg-ink text-white' : 'border-slate-300 text-carvao-600 hover:border-ink');
+  });
+}
+pintarTipos();
+$('#tipos-rapido').addEventListener('click', e => {
+  const b = e.target.closest('.chip-tipo');
+  if (!b) return;
+  tipoRapido = b.dataset.tipo;
+  pintarTipos();
+});
+
+$('#form-rapido').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target;
+  const pedido = await registrarPedido({
+    tipo: 'Serviço — ' + tipoRapido,
+    cliente: { nome: f.nome.value.trim(), fone: f.fone.value.trim() },
+    itens: [{ nome: tipoRapido, qtd: 1, preco: 0 }],
+    obs: f.obs.value.trim()
+  });
+  f.reset();
+  avisar(`Pedido ${pedido.id} registrado. Abrindo o WhatsApp…`);
+  window.open(whats(textoWhats(pedido)), '_blank');
+});
+
+// --- Vitrine
+let categoria = 'Todos';
+const CATEGORIAS = ['Todos', ...new Set(PRODUTOS.map(p => p.cat))];
+
+function pintarFiltros() {
+  $('#filtros').innerHTML = CATEGORIAS.map(c => `
+    <button data-cat="${c}" class="rounded-lg px-4 py-2 text-sm font-semibold border ${
+      c === categoria ? 'bg-ink text-white border-ink' : 'border-slate-300 text-carvao-600 hover:border-ink'}">${c}</button>`).join('');
+}
+
+function pintarProdutos() {
+  const lista = PRODUTOS.filter(p => categoria === 'Todos' || p.cat === categoria);
+  $('#grade-produtos').innerHTML = lista.map(p => `
+    <article class="bg-nevoa rounded-xl border border-slate-200 p-5 flex flex-col">
+      <span class="text-[12px] font-semibold text-laranja">${p.cat}</span>
+      <h3 class="titulo text-lg text-ink mt-1.5">${p.nome}</h3>
+      <p class="text-[14px] text-carvao-400 mt-1 flex-1">${p.desc}</p>
+      <div class="mt-4 flex items-center justify-between gap-3">
+        <span class="titulo text-xl text-ink">${p.preco ? moeda(p.preco) : 'Sob consulta'}</span>
+        <button data-add="${p.id}" class="rounded-lg bg-ink px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-ink-700">Adicionar</button>
+      </div>
+    </article>`).join('');
+}
+pintarFiltros(); pintarProdutos();
+
+$('#filtros').addEventListener('click', e => {
+  const b = e.target.closest('[data-cat]');
+  if (!b) return;
+  categoria = b.dataset.cat;
+  pintarFiltros(); pintarProdutos();
+});
+
+$('#grade-produtos').addEventListener('click', e => {
+  const b = e.target.closest('[data-add]');
+  if (!b) return;
+  const p = PRODUTOS.find(x => x.id === b.dataset.add);
+  addItem({ nome: p.nome, preco: p.preco, qtd: 1 });
+});
+
+/* --- Montador de carimbo --------------------------------- */
+function desenharCarimbo() {
+  const redondo = $('#c-formato').value === 'redondo';
+  $('#campos-retangular').hidden = redondo;
+  $('#campos-redondo').hidden = !redondo;
+
+  const svg = $('#preview-carimbo');
+  if (redondo) {
+    svg.innerHTML = `
+      <circle cx="200" cy="90" r="78" fill="none" stroke="#0B2545" stroke-width="5"/>
+      <circle cx="200" cy="90" r="64" fill="none" stroke="#0B2545" stroke-width="2"/>
+      <path id="arcoTopo" d="M 148 90 A 52 52 0 0 1 252 90" fill="none"/>
+      <path id="arcoBase" d="M 148 90 A 52 52 0 0 0 252 90" fill="none"/>
+      <text font-family="Archivo" font-size="15" font-weight="700" fill="#0B2545" letter-spacing="1.5">
+        <textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">${escapar($('#c-topo').value)}</textPath>
+      </text>
+      <text font-family="Archivo" font-size="13" font-weight="600" fill="#0B2545" letter-spacing="1.5">
+        <textPath href="#arcoBase" startOffset="50%" text-anchor="middle" side="right">${escapar($('#c-base').value)}</textPath>
+      </text>
+      <text x="200" y="96" font-family="Archivo" font-size="20" font-weight="800" fill="#0B2545" text-anchor="middle">${escapar($('#c-centro').value)}</text>`;
+  } else {
+    svg.innerHTML = `
+      <rect x="40" y="35" width="320" height="110" rx="6" fill="none" stroke="#0B2545" stroke-width="5"/>
+      <text x="200" y="72"  font-family="Archivo" font-size="22" font-weight="800" fill="#0B2545" text-anchor="middle">${escapar($('#c-l1').value)}</text>
+      <text x="200" y="100" font-family="Inter"   font-size="15" font-weight="500" fill="#0B2545" text-anchor="middle">${escapar($('#c-l2').value)}</text>
+      <text x="200" y="124" font-family="Inter"   font-size="15" font-weight="500" fill="#0B2545" text-anchor="middle">${escapar($('#c-l3').value)}</text>`;
+  }
+}
+$$('#carimbos input, #carimbos select').forEach(el => el.addEventListener('input', desenharCarimbo));
+desenharCarimbo();
+
+$('#add-carimbo').addEventListener('click', () => {
+  const redondo = $('#c-formato').value === 'redondo';
+  const texto = redondo
+    ? [$('#c-topo').value, $('#c-centro').value, $('#c-base').value].filter(Boolean).join(' / ')
+    : [$('#c-l1').value, $('#c-l2').value, $('#c-l3').value].filter(Boolean).join(' / ');
+  const tam = $('#c-tam').value;
+  const base = PRODUTOS.find(p => p.nome.includes(tam.split(' ')[0])) || PRODUTOS.find(p => p.id === 'c2');
+  addItem({
+    nome: `Carimbo ${$('#c-tipo').value.split(' ')[0].toLowerCase()} ${tam}`,
+    desc: texto,
+    preco: base.preco,
+    qtd: Math.max(1, +$('#c-qtd').value || 1)
+  });
+});
+
+/* --- Cotação --------------------------------------------- */
+let cotacao = [];
+
+function addItem(item) {
+  const igual = cotacao.find(i => i.nome === item.nome && i.desc === item.desc);
+  if (igual) igual.qtd += item.qtd;
+  else cotacao.push({ ...item, uid: crypto.randomUUID() });
+  pintarCotacao();
+  avisar(`${item.nome} adicionado à cotação.`);
+}
+
+function pintarCotacao() {
+  const qtd = cotacao.reduce((s, i) => s + i.qtd, 0);
+  const badge = $('#badge-cotacao');
+  badge.hidden = qtd === 0;
+  badge.textContent = qtd;
+
+  $('#itens-cotacao').innerHTML = cotacao.length ? cotacao.map(i => `
+    <div class="border border-slate-200 rounded-xl p-4">
+      <div class="flex justify-between gap-3">
+        <div class="min-w-0">
+          <p class="font-semibold text-ink">${escapar(i.nome)}</p>
+          ${i.desc ? `<p class="text-[13px] text-carvao-400 mt-0.5 break-words">${escapar(i.desc)}</p>` : ''}
+          <p class="text-[13px] text-carvao-400 mt-1">${i.preco ? moeda(i.preco) + ' cada' : 'Sob consulta'}</p>
+        </div>
+        <button data-remover="${i.uid}" class="text-carvao-400 hover:text-laranja-700 text-[13px] font-semibold shrink-0">Remover</button>
+      </div>
+      <div class="mt-3 flex items-center gap-2">
+        <button data-menos="${i.uid}" class="h-9 w-9 rounded-lg border border-slate-300 font-bold hover:border-ink" aria-label="Diminuir">−</button>
+        <span class="w-9 text-center font-semibold">${i.qtd}</span>
+        <button data-mais="${i.uid}" class="h-9 w-9 rounded-lg border border-slate-300 font-bold hover:border-ink" aria-label="Aumentar">+</button>
+      </div>
+    </div>`).join('')
+    : `<div class="text-center py-16">
+         <p class="titulo text-lg text-ink">Sua cotação está vazia</p>
+         <p class="text-sm text-carvao-400 mt-2 max-w-[32ch] mx-auto">Escolha produtos na vitrine ou monte um carimbo para pedir o orçamento.</p>
+       </div>`;
+
+  const total = cotacao.reduce((s, i) => s + i.preco * i.qtd, 0);
+  $('#total-cotacao').textContent = moeda(total);
+  $('#enviar-cotacao').disabled = cotacao.length === 0;
+}
+pintarCotacao();
+
+$('#itens-cotacao').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const { remover, mais, menos } = b.dataset;
+  if (remover) cotacao = cotacao.filter(i => i.uid !== remover);
+  if (mais)  cotacao.find(i => i.uid === mais).qtd++;
+  if (menos) { const i = cotacao.find(x => x.uid === menos); i.qtd = Math.max(1, i.qtd - 1); }
+  pintarCotacao();
+});
+
+$('#btn-cotacao').addEventListener('click', () => $('#drawer').hidden = false);
+$$('[data-fechar-drawer]').forEach(el => el.addEventListener('click', () => $('#drawer').hidden = true));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') $('#drawer').hidden = true; });
+
+$('#enviar-cotacao').addEventListener('click', async () => {
+  const nome = $('#q-nome').value.trim(), fone = $('#q-fone').value.trim();
+  if (!nome || !fone) return avisar('Preencha seu nome e WhatsApp para enviar.');
+  const pedido = await registrarPedido({
+    tipo: 'Cotação de produtos',
+    cliente: { nome, fone },
+    itens: cotacao.map(({ nome, desc, qtd, preco }) => ({ nome, desc, qtd, preco })),
+    obs: ''
+  });
+  cotacao = []; pintarCotacao();
+  $('#q-nome').value = ''; $('#q-fone').value = '';
+  $('#drawer').hidden = true;
+  avisar(`Cotação ${pedido.id} enviada. Abrindo o WhatsApp…`);
+  window.open(whats(textoWhats(pedido)), '_blank');
+});
+
+/* --- Registro do pedido ---------------------------------- */
+async function registrarPedido({ tipo, cliente, itens, obs }) {
+  const anteriores = await DB.listar();
+  const pedido = {
+    id: novoId(anteriores.length),
+    tipo, cliente, itens, obs,
+    total: itens.reduce((s, i) => s + (i.preco || 0) * i.qtd, 0),
+    status: 'novo',
+    criadoEm: new Date().toISOString(),
+    historico: [{ status: 'novo', em: new Date().toISOString() }]
+  };
+  await DB.salvar(pedido);
+  return pedido;
+}
+
+function textoWhats(p) {
+  const linhas = [
+    `*Pedido ${p.id}* — ${LOJA.nome}`,
+    `Cliente: ${p.cliente.nome} (${p.cliente.fone})`,
+    `Tipo: ${p.tipo}`,
+    '',
+    ...p.itens.map(i => `• ${i.qtd}× ${i.nome}${i.desc ? ` — ${i.desc}` : ''}`)
+  ];
+  if (p.total) linhas.push('', `Estimativa: ${moeda(p.total)}`);
+  if (p.obs)   linhas.push('', `Obs.: ${p.obs}`);
+  return linhas.join('\n');
+}
+
+/* =============================================================
+   6. PAINEL DO VENDEDOR
+   ============================================================= */
+function rotear() {
+  const admin = location.hash === '#admin';
+  $('#site').hidden = admin;
+  $('#admin').hidden = !admin;
+  document.body.classList.toggle('bg-carvao', admin);
+  if (admin && sessionStorage.getItem('rc.logado') === '1') entrarPainel();
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', rotear);
+
+$('#form-login').addEventListener('submit', e => {
+  e.preventDefault();
+  if ($('#senha').value === LOJA.senhaAdmin) {
+    sessionStorage.setItem('rc.logado', '1');
+    $('#erro-login').hidden = true;
+    entrarPainel();
+  } else {
+    $('#erro-login').hidden = false;
+  }
+});
+
+$('#sair').addEventListener('click', () => {
+  sessionStorage.removeItem('rc.logado');
+  $('#admin-painel').hidden = true;
+  $('#admin-login').hidden = false;
+  $('#senha').value = '';
+});
+
+function entrarPainel() {
+  $('#admin-login').hidden = true;
+  $('#admin-painel').hidden = false;
+  pintarPainel();
+}
+
+let filtroStatus = 'todos';
+let termoBusca = '';
+
+$('#busca').addEventListener('input', e => { termoBusca = e.target.value.toLowerCase(); pintarPainel(); });
+
+async function pintarPainel() {
+  const pedidos = await DB.listar();
+
+  // KPIs
+  const hoje = new Date().toDateString();
+  const kpis = [
+    { r: 'Novos',        v: pedidos.filter(p => p.status === 'novo').length },
+    { r: 'Em produção',  v: pedidos.filter(p => p.status === 'producao').length },
+    { r: 'Prontos',      v: pedidos.filter(p => p.status === 'pronto').length },
+    { r: 'Hoje',         v: pedidos.filter(p => new Date(p.criadoEm).toDateString() === hoje).length }
+  ];
+  $('#kpis').innerHTML = kpis.map(k => `
+    <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+      <p class="text-white/55 text-[13px]">${k.r}</p>
+      <p class="titulo text-4xl mt-1">${k.v}</p>
+    </div>`).join('');
+
+  // Filtros
+  const abas = ['todos', ...Object.keys(STATUS)];
+  $('#filtros-status').innerHTML = abas.map(s => `
+    <button data-status="${s}" class="rounded-lg px-3.5 py-2 text-sm font-semibold border ${
+      s === filtroStatus ? 'bg-laranja border-laranja text-white' : 'border-white/20 text-white/70 hover:border-white/50'}">
+      ${s === 'todos' ? 'Todos' : STATUS[s].rotulo}
+    </button>`).join('');
+
+  // Lista
+  const lista = pedidos.filter(p => {
+    const okStatus = filtroStatus === 'todos' || p.status === filtroStatus;
+    const alvo = `${p.id} ${p.cliente.nome} ${p.cliente.fone}`.toLowerCase();
+    return okStatus && alvo.includes(termoBusca);
+  });
+
+  $('#lista-pedidos').innerHTML = lista.length ? lista.map(p => `
+    <article class="bg-white text-carvao rounded-xl p-5">
+      <div class="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="titulo text-lg text-ink">${p.id}</span>
+            <span class="rounded-full px-2.5 py-0.5 text-[12px] font-semibold ${STATUS[p.status].cor}">${STATUS[p.status].rotulo}</span>
+          </div>
+          <p class="text-[15px] font-semibold mt-1.5">${escapar(p.cliente.nome)}</p>
+          <p class="text-[13px] text-carvao-400">${escapar(p.cliente.fone)} · ${p.tipo} · ${new Date(p.criadoEm).toLocaleString('pt-BR', { dateStyle:'short', timeStyle:'short' })}</p>
+        </div>
+        <div class="text-right">
+          <p class="titulo text-xl text-ink">${p.total ? moeda(p.total) : 'A orçar'}</p>
+          <a href="${whats(`Olá ${p.cliente.nome}! Sobre seu pedido ${p.id} no Rei das Chaves:`)}" target="_blank" rel="noopener"
+             class="text-[13px] font-semibold text-verde hover:underline">Responder no WhatsApp</a>
+        </div>
+      </div>
+
+      <ul class="mt-4 border-t border-slate-200 pt-3 space-y-1 text-[14px]">
+        ${p.itens.map(i => `<li>${i.qtd}× ${escapar(i.nome)}${i.desc ? ` <span class="text-carvao-400">— ${escapar(i.desc)}</span>` : ''}</li>`).join('')}
+        ${p.obs ? `<li class="text-carvao-400 pt-1">Obs.: ${escapar(p.obs)}</li>` : ''}
+      </ul>
+
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        <span class="text-[13px] text-carvao-400 mr-1">Mudar status:</span>
+        ${Object.entries(STATUS).map(([k, s]) => `
+          <button data-pedido="${p.id}" data-novo="${k}" class="rounded-lg border px-3 py-1.5 text-[13px] font-semibold ${
+            p.status === k ? 'border-ink bg-ink text-white' : 'border-slate-300 text-carvao-600 hover:border-ink'}">${s.rotulo}</button>`).join('')}
+      </div>
+    </article>`).join('')
+    : `<div class="text-center py-20 border border-dashed border-white/20 rounded-xl">
+         <p class="titulo text-xl">Nenhum pedido por aqui</p>
+         <p class="text-white/60 mt-2 text-[15px]">Os pedidos enviados pelo site aparecem nesta lista assim que chegam.</p>
+       </div>`;
+}
+
+$('#filtros-status').addEventListener('click', e => {
+  const b = e.target.closest('[data-status]'); if (!b) return;
+  filtroStatus = b.dataset.status; pintarPainel();
+});
+
+$('#lista-pedidos').addEventListener('click', async e => {
+  const b = e.target.closest('[data-novo]'); if (!b) return;
+  await DB.atualizarStatus(b.dataset.pedido, b.dataset.novo);
+  avisar(`Pedido ${b.dataset.pedido}: ${STATUS[b.dataset.novo].rotulo}.`);
+  pintarPainel();
+});
+
+$('#exportar').addEventListener('click', async () => {
+  const pedidos = await DB.listar();
+  if (!pedidos.length) return avisar('Não há pedidos para exportar.');
+  const linhas = [['Pedido','Data','Cliente','WhatsApp','Tipo','Itens','Total','Status'].join(';')];
+  pedidos.forEach(p => linhas.push([
+    p.id,
+    new Date(p.criadoEm).toLocaleString('pt-BR'),
+    p.cliente.nome, p.cliente.fone, p.tipo,
+    p.itens.map(i => `${i.qtd}x ${i.nome}`).join(' | '),
+    String(p.total).replace('.', ','),
+    STATUS[p.status].rotulo
+  ].map(c => `"${String(c).replace(/"/g,'""')}"`).join(';')));
+
+  const url = URL.createObjectURL(new Blob(['\uFEFF' + linhas.join('\n')], { type:'text/csv;charset=utf-8' }));
+  const a = Object.assign(document.createElement('a'), { href:url, download:`pedidos-${new Date().toISOString().slice(0,10)}.csv` });
+  a.click(); URL.revokeObjectURL(url);
+});
+
+rotear();
+</script>
+</body>
+</html>
