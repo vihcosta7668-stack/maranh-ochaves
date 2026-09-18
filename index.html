@@ -20,34 +20,24 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          azul:     { DEFAULT: '#1B3C8F', 900: '#132A66', 600: '#2A51B4' },
-          vermelho: { DEFAULT: '#E1251B', 700: '#B81A12' },
-          amarelo:  { DEFAULT: '#FFD200', 600: '#E6BD00' },
-          grafite:  { DEFAULT: '#2A2F36', 400: '#6B7280' },
-          gelo:     '#F3F5FA'
-        },
-        fontFamily: {
-          display: ['Archivo', 'system-ui', 'sans-serif'],
-          sans: ['Inter', 'system-ui', 'sans-serif']
-        }
-      }
-    }
-  }
+  tailwind.config = { theme: { extend: {
+    colors: {
+      azul:     { DEFAULT:'#1B3C8F', 900:'#132A66', 600:'#2A51B4' },
+      vermelho: { DEFAULT:'#E1251B', 700:'#B81A12' },
+      amarelo:  { DEFAULT:'#FFD200', 600:'#E6BD00' },
+      grafite:  { DEFAULT:'#2A2F36', 400:'#6B7280' },
+      gelo:     '#F3F5FA'
+    },
+    fontFamily: { display:['Archivo','system-ui','sans-serif'], sans:['Inter','system-ui','sans-serif'] }
+  }}}
 </script>
 
 <style>
   html { scroll-behavior: smooth; }
-  .titulo { font-family: 'Archivo', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
-  :focus-visible { outline: 3px solid #FFD200; outline-offset: 2px; border-radius: 4px; }
-
-  /* Faixa com o perfil de uma chave, nas cores da marca */
-  .dentes { height: 12px; background-repeat: repeat-x; background-size: 26px 12px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='12'%3E%3Cpath d='M0 0h26v4H20v4h-6V4H7v5H0z' fill='%23FFD200'/%3E%3C/svg%3E"); }
-
+  .titulo { font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.02em; line-height:1.05; }
+  :focus-visible { outline:3px solid #FFD200; outline-offset:2px; border-radius:4px; }
+  .dentes { height:12px; background-repeat:repeat-x; background-size:26px 12px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='12'%3E%3Cpath d='M0 0h26v4H20v4h-6V4H7v5H0z' fill='%23FFD200'/%3E%3C/svg%3E"); }
   .campo { width:100%; border:1.5px solid #CFD6E4; border-radius:10px; padding:11px 13px; font-size:15px; background:#fff; transition:border-color .15s; }
   .campo:focus { border-color:#1B3C8F; outline:none; box-shadow:0 0 0 3px rgba(27,60,143,.15); }
   .rotulo { display:block; font-size:13px; font-weight:600; color:#3A4048; margin-bottom:5px; }
@@ -64,7 +54,7 @@
   <div class="bg-amarelo text-azul-900 text-[13px] font-semibold">
     <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-3">
       <p>Chaveiro de plantão · Parauapebas</p>
-      <a href="tel:+5594984174891" class="hover:text-vermelho shrink-0">(94) 99182-7177</a>
+      <a href="tel:+5594991827177" class="hover:text-vermelho shrink-0">(94) 99182-7177</a>
     </div>
   </div>
 
@@ -76,7 +66,6 @@
       <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-azul">
         <a href="#servicos" class="hover:text-vermelho">Serviços</a>
         <a href="#carimbos" class="hover:text-vermelho">Monte seu carimbo</a>
-        <a href="#precos" class="hover:text-vermelho">Preços</a>
         <a href="#contato" class="hover:text-vermelho">Contato</a>
       </nav>
       <a id="wa-topo" href="#" target="_blank" rel="noopener"
@@ -87,9 +76,8 @@
     </div>
   </header>
 
-  <!-- Herói -->
-  <section class="bg-azul text-white relative overflow-hidden">
-    <div class="mx-auto max-w-6xl px-4 pt-10 pb-0 grid lg:grid-cols-[1.1fr_.9fr] gap-6 items-end">
+  <section class="bg-azul text-white">
+    <div class="mx-auto max-w-6xl px-4 pt-10 grid lg:grid-cols-[1.1fr_.9fr] gap-6 items-end">
       <div class="pb-12 lg:pb-16">
         <p class="text-amarelo font-bold text-sm">Cidade Nova · em frente ao CEUP</p>
         <h1 class="titulo text-[34px] sm:text-5xl lg:text-[54px] mt-3">Chave codificada, cópia na hora e carimbo sob medida.</h1>
@@ -97,12 +85,12 @@
           Carro, moto, casa, comércio e portão eletrônico. Manda a foto da chave no WhatsApp e a gente responde com preço e prazo.
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#carimbos" class="rounded-lg bg-amarelo px-6 py-3.5 font-bold text-azul-900 hover:bg-amarelo-600">Pedir um carimbo</a>
+          <a href="#carimbos" class="rounded-lg bg-amarelo px-6 py-3.5 font-bold text-azul-900 hover:bg-amarelo-600">Monte seu carimbo</a>
           <a id="wa-heroi" href="#" target="_blank" rel="noopener" class="rounded-lg bg-vermelho px-6 py-3.5 font-bold text-white hover:bg-vermelho-700">Falar com a loja</a>
         </div>
       </div>
-      <div class="hidden lg:block relative">
-        <img src="mascote.png" alt="" aria-hidden="true" class="relative z-10 w-[320px] mx-auto block" />
+      <div class="hidden lg:block">
+        <img src="mascote.png" alt="" aria-hidden="true" class="w-[320px] mx-auto block" />
       </div>
     </div>
     <div class="dentes"></div>
@@ -115,24 +103,21 @@
     <div id="lista-servicos" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </section>
 
-  <!-- Montador de carimbo -->
+  <!-- ===== Monte seu carimbo ===== -->
   <section id="carimbos" class="bg-gelo border-y border-slate-200">
     <div class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="titulo text-3xl sm:text-4xl text-azul">Monte seu carimbo</h2>
-      <p class="mt-2 text-grafite-400 max-w-[62ch]">Escreva o texto, veja como fica e envie o pedido. A mensagem chega prontinha no WhatsApp da loja — a arte final volta para você aprovar antes de gravar.</p>
+      <p class="mt-2 text-grafite-400 max-w-[64ch]">Escolha o modelo, escreva o texto e veja a prévia. Pode montar vários carimbos no mesmo pedido — o orçamento fechado aparece no fim.</p>
 
       <div class="mt-8 grid lg:grid-cols-[1fr_1.05fr] gap-8 items-start">
 
-        <!-- Formulário -->
         <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6">
-          <div>
-            <span class="rotulo">Modelo do carimbo</span>
-            <div id="modelos" class="space-y-2"></div>
-          </div>
+          <span class="rotulo">1. Modelo</span>
+          <div id="modelos" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5"></div>
 
-          <div class="mt-5 grid grid-cols-2 gap-3">
+          <div class="mt-6 grid grid-cols-2 gap-3">
             <div>
-              <label class="rotulo" for="c-formato">Formato</label>
+              <label class="rotulo" for="c-formato">2. Formato do texto</label>
               <select id="c-formato" class="campo"><option value="retangular">Retangular</option><option value="redondo">Redondo</option></select>
             </div>
             <div>
@@ -142,57 +127,62 @@
           </div>
 
           <div id="campos-retangular" class="mt-4 space-y-3">
-            <div><label class="rotulo" for="c-l1">Linha 1 (destaque)</label><input id="c-l1" class="campo" maxlength="28" value="Maranhão Chaves LTDA" /></div>
-            <div><label class="rotulo" for="c-l2">Linha 2</label><input id="c-l2" class="campo" maxlength="34" value="CNPJ 00.000.000/0001-00" /></div>
-            <div><label class="rotulo" for="c-l3">Linha 3</label><input id="c-l3" class="campo" maxlength="34" value="Rua A, 529 — Cidade Nova" /></div>
-            <div><label class="rotulo" for="c-l4">Linha 4 (opcional)</label><input id="c-l4" class="campo" maxlength="34" value="" placeholder="Telefone, e-mail…" /></div>
+            <span class="rotulo">3. Texto</span>
+            <input id="c-l1" class="campo" maxlength="28" value="Maranhão Chaves LTDA" placeholder="Linha 1 (destaque)" aria-label="Linha 1" />
+            <input id="c-l2" class="campo" maxlength="34" value="CNPJ 00.000.000/0001-00" placeholder="Linha 2" aria-label="Linha 2" />
+            <input id="c-l3" class="campo" maxlength="34" value="Rua A, 529 — Cidade Nova" placeholder="Linha 3" aria-label="Linha 3" />
+            <input id="c-l4" class="campo" maxlength="34" value="" placeholder="Linha 4 (opcional)" aria-label="Linha 4" />
           </div>
 
           <div id="campos-redondo" class="mt-4 space-y-3" hidden>
-            <div><label class="rotulo" for="c-topo">Arco superior</label><input id="c-topo" class="campo" maxlength="30" value="MARANHÃO CHAVES" /></div>
-            <div><label class="rotulo" for="c-centro">Texto central</label><input id="c-centro" class="campo" maxlength="18" value="CNPJ" /></div>
-            <div><label class="rotulo" for="c-base">Arco inferior</label><input id="c-base" class="campo" maxlength="30" value="PARAUAPEBAS · PA" /></div>
+            <span class="rotulo">3. Texto</span>
+            <input id="c-topo" class="campo" maxlength="30" value="MARANHÃO CHAVES" placeholder="Arco superior" aria-label="Arco superior" />
+            <input id="c-centro" class="campo" maxlength="18" value="CNPJ" placeholder="Texto central" aria-label="Texto central" />
+            <input id="c-base" class="campo" maxlength="30" value="PARAUAPEBAS · PA" placeholder="Arco inferior" aria-label="Arco inferior" />
           </div>
 
-          <hr class="my-6 border-slate-200" />
-
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div><label class="rotulo" for="c-nome">Seu nome</label><input id="c-nome" class="campo" placeholder="Ex.: Ana Souza" /></div>
-            <div><label class="rotulo" for="c-fone">Seu WhatsApp</label><input id="c-fone" class="campo" inputmode="tel" placeholder="(94) 9 0000-0000" /></div>
-          </div>
-          <div class="mt-3"><label class="rotulo" for="c-obs">Observações</label><textarea id="c-obs" rows="2" class="campo" placeholder="Ex.: quero com logotipo, mando por foto"></textarea></div>
-
-          <div class="mt-5 flex items-center justify-between gap-3 rounded-xl bg-gelo px-4 py-3">
-            <span class="text-sm font-semibold text-grafite-400">Valor estimado</span>
-            <span id="valor" class="titulo text-2xl text-azul">R$ 0,00</span>
-          </div>
-
-          <button id="enviar" class="mt-4 w-full rounded-lg bg-vermelho px-5 py-4 font-bold text-white hover:bg-vermelho-700">Enviar pedido no WhatsApp</button>
-          <button id="copiar" class="mt-2 w-full rounded-lg border-2 border-azul px-5 py-3 font-bold text-azul hover:bg-azul hover:text-white">Copiar a mensagem</button>
-          <p class="mt-3 text-[12px] text-grafite-400 text-center">Nada fica salvo no site: o pedido vai direto para a conversa da loja.</p>
+          <button id="add-item" class="mt-6 w-full rounded-lg bg-azul px-5 py-3.5 font-bold text-white hover:bg-azul-900">Adicionar ao pedido</button>
+          <button id="cancelar-edicao" class="mt-2 w-full rounded-lg px-5 py-2.5 font-semibold text-grafite-400 hover:text-vermelho" hidden>Cancelar edição</button>
         </div>
 
-        <!-- Pré-visualização -->
         <div class="lg:sticky lg:top-24">
           <div class="rounded-2xl bg-azul p-6 sm:p-10 grid place-items-center">
             <div class="w-full max-w-[420px] bg-white rounded-xl p-6 shadow-2xl shadow-black/30">
-              <svg id="preview" viewBox="0 0 400 190" class="w-full" role="img" aria-label="Pré-visualização do carimbo"></svg>
+              <svg id="preview" viewBox="0 0 400 190" class="w-full" role="img" aria-label="Prévia do carimbo"></svg>
             </div>
           </div>
           <p class="mt-3 text-[13px] text-grafite-400 text-center">Desenho aproximado. A arte final é feita pela loja e enviada para aprovação.</p>
         </div>
       </div>
+
+      <!-- Fechamento do pedido -->
+      <div id="pedido" class="mt-10 bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 scroll-mt-24">
+        <h3 class="titulo text-2xl text-azul">Seu pedido</h3>
+        <div id="itens" class="mt-4 space-y-3"></div>
+
+        <div id="fechamento" hidden>
+          <div class="mt-5 rounded-xl bg-gelo p-4 sm:p-5">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-grafite-400">Total estimado</span>
+              <span id="total" class="titulo text-3xl text-azul">R$ 0,00</span>
+            </div>
+            <p id="aviso-combinar" class="text-[13px] text-grafite-400 mt-2" hidden>Há item com valor a combinar — a loja confirma no WhatsApp.</p>
+          </div>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-3">
+            <div><label class="rotulo" for="c-nome">Seu nome</label><input id="c-nome" class="campo" placeholder="Ex.: Ana Souza" /></div>
+            <div><label class="rotulo" for="c-fone">Seu WhatsApp</label><input id="c-fone" class="campo" inputmode="tel" placeholder="(94) 9 0000-0000" /></div>
+          </div>
+          <div class="mt-3"><label class="rotulo" for="c-obs">Observações</label><textarea id="c-obs" rows="2" class="campo" placeholder="Ex.: quero com logotipo, mando a arte por foto"></textarea></div>
+
+          <button id="enviar" class="mt-5 w-full rounded-lg bg-vermelho px-5 py-4 font-bold text-white hover:bg-vermelho-700">Enviar pedido no WhatsApp</button>
+          <button id="copiar" class="mt-2 w-full rounded-lg border-2 border-azul px-5 py-3 font-bold text-azul hover:bg-azul hover:text-white">Copiar a mensagem</button>
+          <p class="mt-3 text-[12px] text-grafite-400 text-center">O pedido vai direto para a conversa da loja. Nada fica salvo no site.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Tabela de preços -->
-  <section id="precos" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="titulo text-3xl sm:text-4xl text-azul">Preços dos carimbos</h2>
-    <p class="mt-2 text-grafite-400">Valores por unidade. Arte, gravação e almofada já inclusas.</p>
-    <div id="tabela-precos" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-  </section>
-
-  <!-- Como funciona -->
   <section class="bg-azul text-white">
     <div class="mx-auto max-w-6xl px-4 py-16">
       <h2 class="titulo text-3xl sm:text-4xl">Como funciona</h2>
@@ -200,7 +190,6 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
   <footer id="contato" class="bg-white">
     <div class="dentes"></div>
     <div class="mx-auto max-w-6xl px-4 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -223,7 +212,7 @@
           <li>Sábado: 8h às 13h</li>
           <li>Emergência: plantão 24h</li>
         </ul>
-        <a href="tel:+5594984174891" class="mt-3 inline-block font-bold text-azul hover:text-vermelho">(94) 99182-7177</a>
+        <a href="tel:+5594991827177" class="mt-3 inline-block font-bold text-azul hover:text-vermelho">(94) 99182-7177</a>
       </div>
     </div>
     <div class="bg-azul text-white/60">
@@ -243,17 +232,16 @@
 <!-- ==================== ÁREA DO DONO ==================== -->
 <div id="admin" class="min-h-screen bg-gelo" hidden>
 
-  <!-- Etapa 1: número · Etapa 2: senha -->
   <div id="admin-login" class="min-h-screen grid place-items-center px-4 py-10">
     <div class="w-full max-w-sm bg-white rounded-2xl p-7 border border-slate-200">
       <img src="marca.png" alt="Maranhão Chaves" class="h-10 w-auto mx-auto" />
 
       <form id="form-numero" class="mt-6">
         <h1 class="titulo text-2xl text-azul">Área do dono</h1>
-        <p class="text-sm text-grafite-400 mt-1">Informe o número cadastrado da loja para continuar.</p>
+        <p class="text-sm text-grafite-400 mt-1">Informe o número cadastrado da loja.</p>
         <label class="rotulo mt-5" for="numero">Número de celular</label>
         <input id="numero" class="campo" inputmode="tel" placeholder="(94) 9 9182-7177" autocomplete="tel" />
-        <p id="erro-numero" class="text-[13px] font-semibold text-vermelho mt-2" hidden>Este número não está cadastrado como responsável da loja.</p>
+        <p id="erro-numero" class="text-[13px] font-semibold text-vermelho mt-2" hidden>Número não cadastrado como responsável.</p>
         <button class="mt-4 w-full rounded-lg bg-azul px-5 py-3.5 font-bold text-white hover:bg-azul-900">Continuar</button>
         <a href="#" class="block text-center text-[13px] text-grafite-400 mt-4 hover:text-azul">Voltar para o site</a>
       </form>
@@ -267,48 +255,61 @@
         <button class="mt-4 w-full rounded-lg bg-azul px-5 py-3.5 font-bold text-white hover:bg-azul-900">Entrar</button>
         <button type="button" id="voltar-numero" class="block w-full text-center text-[13px] text-grafite-400 mt-4 hover:text-azul">Usar outro número</button>
         <p class="text-[12px] text-grafite-400 mt-4 leading-relaxed border-t border-slate-200 pt-3">
-          Demonstração: senha <strong>maranhao2026</strong>. A verificação por código de SMS/WhatsApp precisa de um serviço externo — está explicada no manual.
+          Demonstração: senha <strong>maranhao2026</strong>. Troque antes de publicar.
         </p>
       </form>
     </div>
   </div>
 
-  <!-- Painel de preços -->
   <div id="admin-painel" hidden>
     <header class="bg-azul text-white sticky top-0 z-30">
-      <div class="mx-auto max-w-4xl px-4 h-16 flex items-center gap-3">
-        <span class="titulo text-lg mr-auto">Preços dos carimbos</span>
+      <div class="mx-auto max-w-5xl px-4 h-16 flex items-center gap-3">
+        <span class="titulo text-lg mr-auto">Produtos e preços</span>
         <a href="#" class="text-sm text-white/75 hover:text-white">Ver site</a>
         <button id="sair" class="rounded-lg bg-amarelo px-3.5 py-2 text-sm font-bold text-azul-900 hover:bg-amarelo-600">Sair</button>
       </div>
     </header>
 
-    <main class="mx-auto max-w-4xl px-4 py-8">
-      <p class="text-grafite-400 text-[15px] max-w-[66ch]">
-        Altere os valores abaixo e salve. As mudanças valem <strong>neste aparelho</strong> — para que todos os clientes vejam os novos preços, use o botão “Publicar para todos” no fim da página.
-      </p>
+    <main class="mx-auto max-w-5xl px-4 py-8">
+      <p id="origem" class="text-[13px] font-semibold text-grafite-400"></p>
 
-      <div id="editor" class="mt-6 space-y-3"></div>
+      <div id="editor" class="mt-5 space-y-3"></div>
 
-      <button id="add-modelo" class="mt-4 rounded-lg border-2 border-dashed border-slate-300 w-full py-3 font-semibold text-grafite-400 hover:border-azul hover:text-azul">+ Adicionar modelo</button>
+      <button id="add-modelo" class="mt-4 rounded-lg border-2 border-dashed border-slate-300 w-full py-3 font-semibold text-grafite-400 hover:border-azul hover:text-azul">+ Adicionar produto</button>
 
-      <div class="mt-8 flex flex-wrap gap-3 border-t border-slate-200 pt-6">
-        <button id="salvar" class="rounded-lg bg-vermelho px-6 py-3.5 font-bold text-white hover:bg-vermelho-700">Salvar alterações</button>
-        <button id="publicar" class="rounded-lg border-2 border-azul px-6 py-3.5 font-bold text-azul hover:bg-azul hover:text-white">Publicar para todos</button>
-        <button id="restaurar" class="rounded-lg px-4 py-3.5 font-semibold text-grafite-400 hover:text-vermelho">Restaurar padrão</button>
-      </div>
+      <div class="mt-8 bg-white border border-slate-200 rounded-2xl p-5 sm:p-6">
+        <h2 class="titulo text-xl text-azul">Publicar no site</h2>
+        <p class="text-[14px] text-grafite-400 mt-1.5 leading-relaxed">
+          Envia a lista direto para o repositório do site. Em cerca de 1 minuto todos os clientes veem os produtos e preços novos, inclusive os que você adicionou ou apagou.
+        </p>
 
-      <div id="caixa-publicar" class="mt-6 bg-white border border-slate-200 rounded-xl p-5" hidden>
-        <h3 class="titulo text-lg text-azul">Publicar para todos</h3>
-        <p class="text-[14px] text-grafite-400 mt-1.5">Copie o texto abaixo e cole no arquivo <code class="bg-gelo px-1.5 py-0.5 rounded">index.html</code>, no lugar da lista <code class="bg-gelo px-1.5 py-0.5 rounded">PRECOS_PADRAO</code>. O passo a passo está na etapa 4 do manual.</p>
-        <textarea id="json-precos" rows="10" class="campo mt-3 font-mono text-[12px]" readonly></textarea>
-        <button id="copiar-json" class="mt-3 rounded-lg bg-azul px-5 py-2.5 font-bold text-white hover:bg-azul-900">Copiar</button>
+        <div class="mt-4 grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="rotulo" for="gh-token">Chave de acesso do GitHub</label>
+            <input id="gh-token" type="password" class="campo" placeholder="github_pat_..." autocomplete="off" />
+          </div>
+          <div class="flex items-end pb-1">
+            <label class="flex items-center gap-2 text-[13px] font-semibold text-grafite-400">
+              <input id="gh-lembrar" type="checkbox" class="h-4 w-4 accent-azul" /> Lembrar neste aparelho
+            </label>
+          </div>
+        </div>
+        <p class="text-[12px] text-grafite-400 mt-2">Como gerar essa chave: etapa 4 do manual. Ela dá acesso apenas ao repositório do site.</p>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <button id="publicar" class="rounded-lg bg-vermelho px-6 py-3.5 font-bold text-white hover:bg-vermelho-700">Publicar no site</button>
+          <button id="salvar" class="rounded-lg border-2 border-azul px-5 py-3.5 font-bold text-azul hover:bg-azul hover:text-white">Salvar só neste aparelho</button>
+          <button id="baixar" class="rounded-lg px-4 py-3.5 font-semibold text-grafite-400 hover:text-azul">Baixar precos.json</button>
+          <button id="restaurar" class="rounded-lg px-4 py-3.5 font-semibold text-grafite-400 hover:text-vermelho">Restaurar padrão</button>
+        </div>
+
+        <p id="status-pub" class="mt-4 text-[14px] font-semibold" hidden></p>
       </div>
     </main>
   </div>
 </div>
 
-<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] rounded-xl bg-azul-900 text-white px-5 py-3 text-sm font-semibold shadow-xl" hidden></div>
+<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] rounded-xl bg-azul-900 text-white px-5 py-3 text-sm font-semibold shadow-xl max-w-[92vw] text-center" hidden></div>
 
 <script>
 /* =============================================================
@@ -316,58 +317,70 @@
    ============================================================= */
 const LOJA = {
   nome: 'Maranhão Chaves',
-  whatsapp: '5594984174891',     // número que RECEBE os pedidos (DDI + DDD, só números)
-  donos: ['94984174891'],        // números autorizados a entrar na área do dono
-  senha: 'maranhao2026',         // SIMULAÇÃO — trocar antes de publicar (ver manual)
-  endereco: 'Rua A, N° 529 — Cidade Nova (em frente ao CEUP), Parauapebas/PA'
+  whatsapp: '5594991827177',   // número que RECEBE os pedidos
+  donos: ['94991827177'],      // números autorizados na área do dono
+  senha: 'maranhao2026'        // trocar antes de publicar
 };
 
-/* Preços de fábrica. Para mudar de forma definitiva, edite esta lista
-   ou use o botão "Publicar para todos" na área do dono. */
-const PRECOS_PADRAO = [
-  { id:'m1', nome:'Automático 38 × 14 mm', desc:'Até 3 linhas — o mais econômico',  preco:65,  ativo:true },
-  { id:'m2', nome:'Automático 47 × 18 mm', desc:'Até 4 linhas — o mais pedido',     preco:85,  ativo:true },
-  { id:'m3', nome:'Automático 58 × 22 mm', desc:'Até 5 linhas, texto maior',        preco:110, ativo:true },
-  { id:'m4', nome:'Redondo 40 mm',         desc:'Padrão CNPJ, com arcos de texto',  preco:95,  ativo:true },
-  { id:'m5', nome:'Datador automático',    desc:'Data ajustável + texto fixo',      preco:120, ativo:true },
-  { id:'m6', nome:'Carimbo de madeira',    desc:'Logotipo ou assinatura gravados',  preco:55,  ativo:true }
+// Repositório onde o site está hospedado (etapa 4 do manual)
+const REPO = {
+  usuario: 'SEU-USUARIO-GITHUB',
+  nome:    'maranhao-chaves',
+  branch:  'main',
+  arquivo: 'precos.json'
+};
+
+/* Lista de fábrica. Vale enquanto não existir o precos.json no site. */
+const PRODUTOS_PADRAO = [
+  { id:'p1', nome:'Trodat 3911',            tamanho:'38 × 14 mm', desc:'Automático, até 4 linhas',     preco:35, figura:'automatico', cor:'#F2F3F5', ativo:true },
+  { id:'p2', nome:'Nykon 302',              tamanho:'38 × 12 mm', desc:'Automático, até 4 linhas',     preco:35, figura:'automatico', cor:'#F47B20', ativo:true },
+  { id:'p3', nome:'Colop C-20',             tamanho:'38 × 14 mm', desc:'Automático, até 4 linhas',     preco:39, figura:'automatico', cor:'#1E1E1E', ativo:true },
+  { id:'p4', nome:'Trodat 4911',            tamanho:'38 × 14 mm', desc:'Automático reforçado',         preco:45, figura:'automatico', cor:'#D42A20', ativo:true },
+  { id:'p5', nome:'De bolso Colop',         tamanho:'38 × 12 mm', desc:'Cabe no bolso, várias cores',  preco:65, figura:'bolso',      cor:'#6C5CC9', ativo:true },
+  { id:'p6', nome:'De bolso Shiny S-722',   tamanho:'38 × 14 mm', desc:'Cabe no bolso, várias cores',  preco:65, figura:'bolso',      cor:'#E5307E', ativo:true },
+  { id:'p7', nome:'De bolso Nykon',         tamanho:'38 × 14 mm', desc:'Cabe no bolso, várias cores',  preco:65, figura:'bolso',      cor:'#2FA189', ativo:true },
+  { id:'p8', nome:'Redondo 40 mm',          tamanho:'40 mm',      desc:'Padrão CNPJ, arcos de texto',  preco:0,  figura:'redondo',    cor:'#1B3C8F', ativo:true },
+  { id:'p9', nome:'Carimbo de madeira',     tamanho:'sob medida', desc:'Cabo de madeira, uso manual',  preco:0,  figura:'madeira',    cor:'#9B6B3A', ativo:true }
 ];
 
 /* =============================================================
-   2. ONDE OS PREÇOS FICAM GUARDADOS
-   Hoje: no navegador do dono (localStorage).
-   Para valer em todos os aparelhos, troque estas duas funções
-   pelo Supabase — instruções no MANUAL-PUBLICACAO.md
+   2. DE ONDE VÊM OS PRODUTOS
+   precos.json (site, vale para todos) → aparelho → lista de fábrica
    ============================================================= */
-const PRECOS = {
+const DADOS = {
   CHAVE: 'maranhaochaves.precos',
+  origem: 'fábrica',
 
   async carregar() {
     try {
+      const r = await fetch(`${REPO.arquivo}?v=${Date.now()}`, { cache:'no-store' });
+      if (r.ok) {
+        const lista = await r.json();
+        if (Array.isArray(lista) && lista.length) { this.origem = 'site'; return lista; }
+      }
+    } catch {}
+    try {
       const salvo = JSON.parse(localStorage.getItem(this.CHAVE));
-      return Array.isArray(salvo) && salvo.length ? salvo : structuredClone(PRECOS_PADRAO);
-    } catch { return structuredClone(PRECOS_PADRAO); }
+      if (Array.isArray(salvo) && salvo.length) { this.origem = 'aparelho'; return salvo; }
+    } catch {}
+    this.origem = 'fábrica';
+    return structuredClone(PRODUTOS_PADRAO);
   },
 
-  async gravar(lista) {
-    localStorage.setItem(this.CHAVE, JSON.stringify(lista));
-  },
-
-  async limpar() {
-    localStorage.removeItem(this.CHAVE);
-  }
+  gravarLocal(lista) { localStorage.setItem(this.CHAVE, JSON.stringify(lista)); },
+  limparLocal()      { localStorage.removeItem(this.CHAVE); }
 };
 
 /* =============================================================
    3. CONTEÚDO FIXO
    ============================================================= */
 const SERVICOS = [
-  { t:'Chave codificada',      d:'Carro e moto com chip transponder: cópia, cadastro e programação no veículo.', i:'chip',     m:'Olá! Preciso de uma chave codificada. O veículo é: ' },
-  { t:'Cópia de chaves',       d:'Yale, tetra, gaveteiro, cadeado e chave de comércio. Sai na hora.',            i:'chave',    m:'Olá! Preciso de cópia de chave. ' },
-  { t:'Controle de portão',    d:'Cópia de controle, troca de bateria e programação do receptor.',               i:'controle', m:'Olá! Preciso de cópia de controle de portão. ' },
-  { t:'Carimbos',              d:'Automáticos, de madeira e datadores, com arte aprovada antes de gravar.',      i:'carimbo',  m:'Olá! Quero fazer um carimbo. ' },
-  { t:'Chaveiro emergencial',  d:'Abertura de veículo, casa e comércio sem danificar a fechadura.',              i:'sirene',   m:'Olá! Situação de emergência: estou trancado ' },
-  { t:'Troca de segredo',      d:'Perdeu a chave? Regravamos o segredo da fechadura e entregamos cópias novas.', i:'cadeado',  m:'Olá! Preciso de troca de segredo de fechadura. ' }
+  { t:'Chave codificada',     d:'Carro e moto com chip transponder: cópia, cadastro e programação no veículo.', i:'chip',     m:'Olá! Preciso de uma chave codificada. O veículo é: ' },
+  { t:'Cópia de chaves',      d:'Yale, tetra, gaveteiro, cadeado e chave de comércio. Sai na hora.',            i:'chave',    m:'Olá! Preciso de cópia de chave. ' },
+  { t:'Controle de portão',   d:'Cópia de controle, troca de bateria e programação do receptor.',               i:'controle', m:'Olá! Preciso de cópia de controle de portão. ' },
+  { t:'Carimbos',             d:'Automáticos, de bolso, redondos e de madeira, com arte aprovada antes.',       i:'carimbo',  m:'Olá! Quero fazer um carimbo. ' },
+  { t:'Chaveiro emergencial', d:'Abertura de veículo, casa e comércio sem danificar a fechadura.',              i:'sirene',   m:'Olá! Situação de emergência: estou trancado ' },
+  { t:'Troca de segredo',     d:'Perdeu a chave? Regravamos o segredo da fechadura e entregamos cópias novas.', i:'cadeado',  m:'Olá! Preciso de troca de segredo de fechadura. ' }
 ];
 
 const ICONES = {
@@ -380,10 +393,10 @@ const ICONES = {
 };
 
 const PASSOS = [
-  { t:'Monte o pedido', d:'Escolha o modelo, escreva o texto e veja a prévia aqui no site.' },
+  { t:'Monte o pedido',    d:'Escolha os modelos, escreva os textos e veja a prévia aqui no site.' },
   { t:'Envie no WhatsApp', d:'A mensagem chega pronta na loja, com modelo, texto, quantidade e valor.' },
-  { t:'Aprove a arte',  d:'A loja responde com a arte final. Você confirma ou pede ajuste.' },
-  { t:'Retire',         d:'Fica pronto em até 24h na Rua A, 529 — Cidade Nova.' }
+  { t:'Aprove a arte',     d:'A loja responde com a arte final. Você confirma ou pede ajuste.' },
+  { t:'Retire',            d:'Fica pronto em até 24h na Rua A, 529 — Cidade Nova.' }
 ];
 
 /* =============================================================
@@ -392,34 +405,61 @@ const PASSOS = [
 const $  = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const moeda = v => (+v || 0).toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
-const escapar = t => String(t).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const escapar = t => String(t ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 const soNumeros = t => String(t).replace(/\D/g, '');
 const whats = (texto = '') => `https://wa.me/${LOJA.whatsapp}${texto ? '?text=' + encodeURIComponent(texto) : ''}`;
 
 function avisar(msg) {
   const el = $('#toast');
-  el.textContent = msg;
-  el.hidden = false;
+  el.textContent = msg; el.hidden = false;
   clearTimeout(avisar._t);
-  avisar._t = setTimeout(() => el.hidden = true, 3200);
+  avisar._t = setTimeout(() => el.hidden = true, 3600);
 }
 
 async function copiar(texto) {
   try { await navigator.clipboard.writeText(texto); return true; }
   catch {
     const ta = document.createElement('textarea');
-    ta.value = texto; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    ta.value = texto; ta.style.position='fixed'; ta.style.opacity='0';
     document.body.appendChild(ta); ta.select();
-    const ok = document.execCommand('copy');
-    ta.remove(); return ok;
+    const ok = document.execCommand('copy'); ta.remove(); return ok;
   }
+}
+
+/* Desenho vetorial de cada tipo de carimbo */
+function figura(tipo, cor) {
+  const claro = ['#F2F3F5','#FFFFFF','#fff','#FFD200'].includes(String(cor).toUpperCase()) || String(cor).toUpperCase() === '#F2F3F5';
+  const borda = claro ? '#9AA3B2' : 'none';
+  const base  = '<rect x="12" y="76" width="96" height="12" rx="3" fill="#2A2F36"/>';
+  if (tipo === 'bolso') return `<svg viewBox="0 0 120 100" class="w-full h-full">
+    <rect x="42" y="12" width="36" height="62" rx="9" fill="${cor}" stroke="${borda}" stroke-width="1.5"/>
+    <rect x="52" y="18" width="16" height="24" rx="4" fill="#fff" opacity=".85"/>
+    <rect x="42" y="12" width="36" height="12" rx="9" fill="#000" opacity=".18"/>${base}</svg>`;
+  if (tipo === 'redondo') return `<svg viewBox="0 0 120 100" class="w-full h-full">
+    <rect x="50" y="10" width="20" height="18" rx="5" fill="${cor}" stroke="${borda}" stroke-width="1.5"/>
+    <circle cx="60" cy="50" r="27" fill="${cor}" stroke="${borda}" stroke-width="1.5"/>
+    <circle cx="60" cy="50" r="17" fill="#fff" opacity=".85"/>${base}</svg>`;
+  if (tipo === 'madeira') return `<svg viewBox="0 0 120 100" class="w-full h-full">
+    <ellipse cx="60" cy="18" rx="13" ry="11" fill="${cor}"/>
+    <rect x="55" y="24" width="10" height="26" fill="${cor}"/>
+    <rect x="34" y="48" width="52" height="14" rx="3" fill="${cor}"/>
+    <rect x="34" y="48" width="52" height="5" fill="#000" opacity=".15"/>
+    <rect x="36" y="62" width="48" height="10" rx="2" fill="#2A2F36"/>${base}</svg>`;
+  return `<svg viewBox="0 0 120 100" class="w-full h-full">
+    <rect x="30" y="8" width="60" height="14" rx="6" fill="${cor}" stroke="${borda}" stroke-width="1.5"/>
+    <rect x="30" y="8" width="60" height="6" rx="3" fill="#000" opacity=".18"/>
+    <rect x="20" y="24" width="80" height="50" rx="7" fill="${cor}" stroke="${borda}" stroke-width="1.5"/>
+    <rect x="28" y="34" width="64" height="18" rx="2" fill="#fff" opacity=".9"/>
+    <rect x="28" y="34" width="64" height="18" rx="2" fill="none" stroke="#2A2F36" stroke-width="1" opacity=".3"/>${base}</svg>`;
 }
 
 /* =============================================================
    5. SITE
    ============================================================= */
-let precos = [];
-let modeloEscolhido = null;
+let produtos = [];
+let pedido = [];
+let modeloId = null;
+let editando = null;   // índice do item em edição
 
 $('#ano').textContent = new Date().getFullYear();
 ['#wa-topo','#wa-heroi','#wa-rodape','#wa-flutuante'].forEach(s => {
@@ -435,54 +475,32 @@ $('#lista-servicos').innerHTML = SERVICOS.map(s => `
   </article>`).join('');
 
 $('#passos').innerHTML = PASSOS.map((p, i) => `
-  <li>
-    <span class="titulo text-amarelo text-3xl">${i + 1}</span>
+  <li><span class="titulo text-amarelo text-3xl">${i + 1}</span>
     <h3 class="titulo text-lg mt-1">${p.t}</h3>
-    <p class="text-white/75 text-[15px] mt-1.5 leading-relaxed">${p.d}</p>
-  </li>`).join('');
+    <p class="text-white/75 text-[15px] mt-1.5 leading-relaxed">${p.d}</p></li>`).join('');
 
 function pintarModelos() {
-  const ativos = precos.filter(p => p.ativo);
-  if (!modeloEscolhido || !ativos.some(p => p.id === modeloEscolhido)) {
-    modeloEscolhido = ativos[0]?.id ?? null;
-  }
+  const ativos = produtos.filter(p => p.ativo);
+  if (!modeloId || !ativos.some(p => p.id === modeloId)) modeloId = ativos[0]?.id ?? null;
 
   $('#modelos').innerHTML = ativos.length ? ativos.map(p => `
     <button type="button" data-modelo="${p.id}"
-      class="w-full text-left rounded-xl border-2 px-4 py-3 flex items-center justify-between gap-3 ${
-        p.id === modeloEscolhido ? 'border-azul bg-azul/5' : 'border-slate-200 hover:border-azul'}">
-      <span>
-        <span class="block font-bold text-azul">${escapar(p.nome)}</span>
-        <span class="block text-[13px] text-grafite-400">${escapar(p.desc)}</span>
-      </span>
-      <span class="titulo text-lg text-vermelho shrink-0">${moeda(p.preco)}</span>
+      class="rounded-xl border-2 p-2.5 text-left ${p.id === modeloId ? 'border-azul bg-azul/5' : 'border-slate-200 hover:border-azul'}">
+      <span class="block h-16">${figura(p.figura, p.cor)}</span>
+      <span class="block font-bold text-azul text-[13px] leading-tight mt-1.5">${escapar(p.nome)}</span>
+      <span class="block text-[11px] text-grafite-400">${escapar(p.tamanho)}</span>
     </button>`).join('')
-    : '<p class="text-sm text-grafite-400">Nenhum modelo disponível no momento. Fale com a loja pelo WhatsApp.</p>';
-
-  $('#tabela-precos').innerHTML = ativos.map(p => `
-    <article class="rounded-xl border border-slate-200 p-5 flex flex-col">
-      <h3 class="titulo text-lg text-azul">${escapar(p.nome)}</h3>
-      <p class="text-[14px] text-grafite-400 mt-1 flex-1">${escapar(p.desc)}</p>
-      <p class="titulo text-2xl text-vermelho mt-4">${moeda(p.preco)}</p>
-    </article>`).join('');
-
-  calcular();
+    : '<p class="col-span-full text-sm text-grafite-400">Nenhum modelo disponível. Fale com a loja pelo WhatsApp.</p>';
 }
 
 $('#modelos').addEventListener('click', e => {
   const b = e.target.closest('[data-modelo]');
   if (!b) return;
-  modeloEscolhido = b.dataset.modelo;
+  modeloId = b.dataset.modelo;
   pintarModelos();
 });
 
-function calcular() {
-  const m = precos.find(p => p.id === modeloEscolhido);
-  const qtd = Math.max(1, +$('#c-qtd').value || 1);
-  $('#valor').textContent = m ? moeda(m.preco * qtd) : 'A combinar';
-}
-
-/* --- Prévia do carimbo ----------------------------------- */
+/* --- Prévia -------------------------------------------- */
 function desenhar() {
   const redondo = $('#c-formato').value === 'redondo';
   $('#campos-retangular').hidden = redondo;
@@ -496,69 +514,143 @@ function desenhar() {
       <path id="arcoTopo" d="M 146 95 A 54 54 0 0 1 254 95" fill="none"/>
       <path id="arcoBase" d="M 146 95 A 54 54 0 0 0 254 95" fill="none"/>
       <text font-family="Archivo" font-size="15" font-weight="700" fill="#1B3C8F" letter-spacing="1.5">
-        <textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">${escapar($('#c-topo').value)}</textPath>
-      </text>
+        <textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">${escapar($('#c-topo').value)}</textPath></text>
       <text font-family="Archivo" font-size="13" font-weight="600" fill="#1B3C8F" letter-spacing="1.5">
-        <textPath href="#arcoBase" startOffset="50%" text-anchor="middle" side="right">${escapar($('#c-base').value)}</textPath>
-      </text>
+        <textPath href="#arcoBase" startOffset="50%" text-anchor="middle" side="right">${escapar($('#c-base').value)}</textPath></text>
       <text x="200" y="101" font-family="Archivo" font-size="20" font-weight="800" fill="#1B3C8F" text-anchor="middle">${escapar($('#c-centro').value)}</text>`;
   } else {
-    const linhas = [$('#c-l2').value, $('#c-l3').value, $('#c-l4').value].filter(Boolean);
+    const extras = [$('#c-l2').value, $('#c-l3').value, $('#c-l4').value].filter(Boolean);
     svg.innerHTML = `
       <rect x="36" y="38" width="328" height="114" rx="6" fill="none" stroke="#1B3C8F" stroke-width="5"/>
-      <text x="200" y="${linhas.length > 2 ? 70 : 78}" font-family="Archivo" font-size="22" font-weight="800" fill="#1B3C8F" text-anchor="middle">${escapar($('#c-l1').value)}</text>
-      ${linhas.map((t, i) => `<text x="200" y="${(linhas.length > 2 ? 96 : 108) + i * 22}" font-family="Inter" font-size="15" font-weight="500" fill="#1B3C8F" text-anchor="middle">${escapar(t)}</text>`).join('')}`;
+      <text x="200" y="${extras.length > 2 ? 70 : 78}" font-family="Archivo" font-size="22" font-weight="800" fill="#1B3C8F" text-anchor="middle">${escapar($('#c-l1').value)}</text>
+      ${extras.map((t, i) => `<text x="200" y="${(extras.length > 2 ? 96 : 108) + i * 22}" font-family="Inter" font-size="15" font-weight="500" fill="#1B3C8F" text-anchor="middle">${escapar(t)}</text>`).join('')}`;
   }
 }
-$$('#carimbos input, #carimbos select, #carimbos textarea').forEach(el => {
-  el.addEventListener('input', () => { desenhar(); calcular(); });
-});
+$$('#carimbos input, #carimbos select').forEach(el => el.addEventListener('input', desenhar));
 
-/* --- Mensagem do pedido ---------------------------------- */
-function montarMensagem() {
-  const m = precos.find(p => p.id === modeloEscolhido);
-  const qtd = Math.max(1, +$('#c-qtd').value || 1);
+/* --- Itens do pedido ----------------------------------- */
+function lerFormulario() {
   const redondo = $('#c-formato').value === 'redondo';
-
-  const texto = redondo
+  const linhas = redondo
     ? [['Arco superior', $('#c-topo').value], ['Centro', $('#c-centro').value], ['Arco inferior', $('#c-base').value]]
     : [['Linha 1', $('#c-l1').value], ['Linha 2', $('#c-l2').value], ['Linha 3', $('#c-l3').value], ['Linha 4', $('#c-l4').value]];
+  return {
+    produtoId: modeloId,
+    formato: redondo ? 'Redondo' : 'Retangular',
+    qtd: Math.max(1, +$('#c-qtd').value || 1),
+    linhas: linhas.filter(([, v]) => v.trim()).map(([r, v]) => [r, v.trim()])
+  };
+}
 
-  const l = [
-    `*PEDIDO DE CARIMBO — ${LOJA.nome}*`,
-    '',
-    `*Modelo:* ${m ? m.nome : 'a definir'}`,
-    `*Formato:* ${redondo ? 'Redondo' : 'Retangular'}`,
-    `*Quantidade:* ${qtd}`,
-    '',
-    '*Texto do carimbo:*',
-    ...texto.filter(([, v]) => v.trim()).map(([r, v]) => `${r}: ${v.trim()}`)
-  ];
+function preencherFormulario(item) {
+  modeloId = item.produtoId;
+  $('#c-formato').value = item.formato === 'Redondo' ? 'redondo' : 'retangular';
+  $('#c-qtd').value = item.qtd;
+  ['#c-l1','#c-l2','#c-l3','#c-l4','#c-topo','#c-centro','#c-base'].forEach(s => $(s).value = '');
+  const mapa = { 'Linha 1':'#c-l1','Linha 2':'#c-l2','Linha 3':'#c-l3','Linha 4':'#c-l4',
+                 'Arco superior':'#c-topo','Centro':'#c-centro','Arco inferior':'#c-base' };
+  item.linhas.forEach(([r, v]) => { if (mapa[r]) $(mapa[r]).value = v; });
+  pintarModelos(); desenhar();
+}
 
-  if (m) l.push('', `*Valor estimado:* ${moeda(m.preco * qtd)} (${moeda(m.preco)} cada)`);
+$('#add-item').addEventListener('click', () => {
+  const item = lerFormulario();
+  if (!item.produtoId) return avisar('Escolha um modelo de carimbo.');
+  if (!item.linhas.length) return avisar('Escreva pelo menos uma linha de texto.');
+
+  if (editando !== null) { pedido[editando] = item; editando = null; $('#cancelar-edicao').hidden = true; $('#add-item').textContent = 'Adicionar ao pedido'; }
+  else pedido.push(item);
+
+  pintarPedido();
+  avisar('Carimbo adicionado. Monte outro ou finalize o pedido.');
+  $('#pedido').scrollIntoView({ behavior:'smooth', block:'start' });
+});
+
+$('#cancelar-edicao').addEventListener('click', () => {
+  editando = null;
+  $('#cancelar-edicao').hidden = true;
+  $('#add-item').textContent = 'Adicionar ao pedido';
+});
+
+function subtotal(item) {
+  const p = produtos.find(x => x.id === item.produtoId);
+  return p ? p.preco * item.qtd : 0;
+}
+
+function pintarPedido() {
+  $('#fechamento').hidden = pedido.length === 0;
+
+  $('#itens').innerHTML = pedido.length ? pedido.map((item, i) => {
+    const p = produtos.find(x => x.id === item.produtoId);
+    const valor = p && p.preco ? moeda(p.preco * item.qtd) : 'A combinar';
+    return `
+    <div class="border border-slate-200 rounded-xl p-4 flex gap-4">
+      <span class="h-14 w-16 shrink-0">${p ? figura(p.figura, p.cor) : ''}</span>
+      <div class="min-w-0 flex-1">
+        <p class="font-bold text-azul">${escapar(p ? p.nome : 'Modelo')} <span class="font-medium text-grafite-400 text-[13px]">${escapar(p ? p.tamanho : '')}</span></p>
+        <p class="text-[13px] text-grafite-400">${item.formato} · ${item.qtd} unidade${item.qtd > 1 ? 's' : ''}</p>
+        <p class="text-[13px] text-grafite mt-1 break-words">${escapar(item.linhas.map(([, v]) => v).join(' · '))}</p>
+        <div class="mt-2 flex gap-3 text-[13px] font-bold">
+          <button data-editar="${i}" class="text-azul hover:underline">Editar</button>
+          <button data-remover="${i}" class="text-vermelho hover:underline">Remover</button>
+        </div>
+      </div>
+      <span class="titulo text-lg text-azul shrink-0">${valor}</span>
+    </div>`;
+  }).join('')
+    : `<p class="text-grafite-400 text-[15px] py-6 text-center">Nenhum carimbo no pedido ainda. Monte o primeiro acima.</p>`;
+
+  const total = pedido.reduce((s, i) => s + subtotal(i), 0);
+  $('#total').textContent = moeda(total);
+  $('#aviso-combinar').hidden = !pedido.some(i => { const p = produtos.find(x => x.id === i.produtoId); return !p || !p.preco; });
+}
+
+$('#itens').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.remover !== undefined) {
+    pedido.splice(+b.dataset.remover, 1);
+    if (editando !== null) { editando = null; $('#cancelar-edicao').hidden = true; $('#add-item').textContent = 'Adicionar ao pedido'; }
+    pintarPedido();
+  }
+  if (b.dataset.editar !== undefined) {
+    editando = +b.dataset.editar;
+    preencherFormulario(pedido[editando]);
+    $('#cancelar-edicao').hidden = false;
+    $('#add-item').textContent = 'Salvar alteração';
+    $('#carimbos').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+});
+
+/* --- Mensagem ------------------------------------------- */
+function montarMensagem() {
+  const l = [`*PEDIDO DE CARIMBO${pedido.length > 1 ? 'S' : ''} — ${LOJA.nome}*`, ''];
+
+  pedido.forEach((item, i) => {
+    const p = produtos.find(x => x.id === item.produtoId);
+    l.push(`*${i + 1}) ${p ? p.nome : 'Modelo'} — ${p ? p.tamanho : ''}*`);
+    l.push(`Formato: ${item.formato} | Quantidade: ${item.qtd}`);
+    item.linhas.forEach(([r, v]) => l.push(`${r}: ${v}`));
+    if (p && p.preco) l.push(`Subtotal: ${moeda(p.preco * item.qtd)} (${moeda(p.preco)} cada)`);
+    else l.push('Subtotal: a combinar');
+    l.push('');
+  });
+
+  const total = pedido.reduce((s, i) => s + subtotal(i), 0);
+  l.push(`*Total estimado: ${moeda(total)}*`);
   if ($('#c-obs').value.trim()) l.push('', `*Observações:* ${$('#c-obs').value.trim()}`);
-
-  l.push('', '*Meus dados:*');
-  l.push(`Nome: ${$('#c-nome').value.trim() || '(não informado)'}`);
-  l.push(`WhatsApp: ${$('#c-fone').value.trim() || '(não informado)'}`);
+  l.push('', '*Meus dados:*', `Nome: ${$('#c-nome').value.trim()}`, `WhatsApp: ${$('#c-fone').value.trim()}`);
   l.push('', 'Enviado pelo site da loja.');
   return l.join('\n');
 }
 
 function validar() {
-  const temTexto = ['#c-l1','#c-l2','#c-l3','#c-l4','#c-topo','#c-centro','#c-base']
-    .some(s => $(s).value.trim());
-  if (!temTexto) { avisar('Escreva pelo menos uma linha de texto do carimbo.'); return false; }
-  if (!$('#c-nome').value.trim()) { avisar('Preencha seu nome para a loja saber quem pediu.'); $('#c-nome').focus(); return false; }
+  if (!pedido.length) { avisar('Adicione pelo menos um carimbo ao pedido.'); return false; }
+  if (!$('#c-nome').value.trim()) { avisar('Preencha seu nome.'); $('#c-nome').focus(); return false; }
   if (!$('#c-fone').value.trim()) { avisar('Preencha seu WhatsApp para a loja responder.'); $('#c-fone').focus(); return false; }
   return true;
 }
 
-$('#enviar').addEventListener('click', () => {
-  if (!validar()) return;
-  window.open(whats(montarMensagem()), '_blank');
-});
-
+$('#enviar').addEventListener('click', () => { if (validar()) window.open(whats(montarMensagem()), '_blank'); });
 $('#copiar').addEventListener('click', async () => {
   if (!validar()) return;
   avisar(await copiar(montarMensagem()) ? 'Mensagem copiada. Cole na conversa da loja.' : 'Não foi possível copiar. Use o botão do WhatsApp.');
@@ -584,16 +676,12 @@ $('#form-numero').addEventListener('submit', e => {
   if (!LOJA.donos.includes(n)) { $('#erro-numero').hidden = false; return; }
   $('#erro-numero').hidden = true;
   $('#numero-eco').textContent = $('#numero').value;
-  $('#form-numero').hidden = true;
-  $('#form-senha').hidden = false;
-  $('#senha').focus();
+  $('#form-numero').hidden = true; $('#form-senha').hidden = false; $('#senha').focus();
 });
 
 $('#voltar-numero').addEventListener('click', () => {
-  $('#form-senha').hidden = true;
-  $('#form-numero').hidden = false;
-  $('#senha').value = '';
-  $('#erro-senha').hidden = true;
+  $('#form-senha').hidden = true; $('#form-numero').hidden = false;
+  $('#senha').value = ''; $('#erro-senha').hidden = true;
 });
 
 $('#form-senha').addEventListener('submit', e => {
@@ -605,33 +693,43 @@ $('#form-senha').addEventListener('submit', e => {
 
 $('#sair').addEventListener('click', () => {
   sessionStorage.removeItem('mc.dono');
-  $('#admin-painel').hidden = true;
-  $('#admin-login').hidden = false;
-  $('#form-senha').hidden = true;
-  $('#form-numero').hidden = false;
+  $('#admin-painel').hidden = true; $('#admin-login').hidden = false;
+  $('#form-senha').hidden = true; $('#form-numero').hidden = false;
   $('#senha').value = ''; $('#numero').value = '';
 });
 
 function abrirPainel() {
   $('#admin-login').hidden = true;
   $('#admin-painel').hidden = false;
-  rascunho = structuredClone(precos);
+  rascunho = structuredClone(produtos);
+  $('#gh-token').value = localStorage.getItem('mc.token') || '';
+  $('#gh-lembrar').checked = !!localStorage.getItem('mc.token');
+  const de = { site:'publicada no site (vale para todos os clientes)', aparelho:'salva só neste aparelho', 'fábrica':'lista de fábrica do código' }[DADOS.origem];
+  $('#origem').textContent = `Lista em uso: ${de}.`;
   pintarEditor();
 }
 
+const FIGURAS = ['automatico','bolso','redondo','madeira'];
+
 function pintarEditor() {
   $('#editor').innerHTML = rascunho.map((p, i) => `
-    <div class="bg-white border border-slate-200 rounded-xl p-4 grid sm:grid-cols-[1fr_140px_auto] gap-3 items-end">
-      <div class="space-y-2">
-        <input data-i="${i}" data-campo="nome" class="campo font-semibold" value="${escapar(p.nome)}" aria-label="Nome do modelo" />
-        <input data-i="${i}" data-campo="desc" class="campo text-[13px]" value="${escapar(p.desc)}" aria-label="Descrição" />
+    <div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-wrap lg:flex-nowrap gap-4 items-start">
+      <span class="h-16 w-20 shrink-0">${figura(p.figura, p.cor)}</span>
+      <div class="flex-1 min-w-[220px] grid sm:grid-cols-2 gap-2">
+        <input data-i="${i}" data-campo="nome" class="campo font-semibold" value="${escapar(p.nome)}" placeholder="Nome" aria-label="Nome" />
+        <input data-i="${i}" data-campo="tamanho" class="campo" value="${escapar(p.tamanho)}" placeholder="Tamanho" aria-label="Tamanho" />
+        <input data-i="${i}" data-campo="desc" class="campo sm:col-span-2 text-[13px]" value="${escapar(p.desc)}" placeholder="Descrição" aria-label="Descrição" />
       </div>
-      <div>
-        <label class="rotulo">Preço (R$)</label>
-        <input data-i="${i}" data-campo="preco" type="number" min="0" step="1" class="campo" value="${p.preco}" />
+      <div class="grid grid-cols-3 gap-2 w-full lg:w-auto lg:shrink-0">
+        <div><label class="rotulo">Preço</label><input data-i="${i}" data-campo="preco" type="number" min="0" step="1" class="campo" value="${p.preco}" /></div>
+        <div><label class="rotulo">Tipo</label>
+          <select data-i="${i}" data-campo="figura" class="campo">
+            ${FIGURAS.map(f => `<option value="${f}" ${p.figura === f ? 'selected' : ''}>${f}</option>`).join('')}
+          </select></div>
+        <div><label class="rotulo">Cor</label><input data-i="${i}" data-campo="cor" type="color" class="campo h-[46px] p-1" value="${p.cor}" /></div>
       </div>
-      <div class="flex items-center gap-3 pb-1">
-        <label class="flex items-center gap-2 text-[13px] font-semibold text-grafite-400">
+      <div class="flex items-center gap-3 w-full lg:w-auto lg:flex-col lg:items-end lg:pt-6">
+        <label class="flex items-center gap-2 text-[13px] font-semibold text-grafite-400 whitespace-nowrap">
           <input data-i="${i}" data-campo="ativo" type="checkbox" class="h-4 w-4 accent-azul" ${p.ativo ? 'checked' : ''} /> No site
         </label>
         <button data-remover="${i}" class="text-[13px] font-bold text-vermelho hover:underline">Excluir</button>
@@ -644,57 +742,111 @@ $('#editor').addEventListener('input', e => {
   if (el.dataset.i === undefined) return;
   const p = rascunho[+el.dataset.i];
   p[el.dataset.campo] = el.type === 'checkbox' ? el.checked
-                      : el.dataset.campo === 'preco' ? +el.value
-                      : el.value;
+                      : el.dataset.campo === 'preco' ? +el.value : el.value;
+  if (['figura','cor'].includes(el.dataset.campo)) pintarEditor();
 });
 
 $('#editor').addEventListener('click', e => {
-  const b = e.target.closest('[data-remover]');
-  if (!b) return;
+  const b = e.target.closest('[data-remover]'); if (!b) return;
   rascunho.splice(+b.dataset.remover, 1);
   pintarEditor();
 });
 
 $('#add-modelo').addEventListener('click', () => {
-  rascunho.push({ id: 'm' + Date.now(), nome: 'Novo modelo', desc: 'Descrição', preco: 0, ativo: true });
+  rascunho.push({ id:'p' + Date.now(), nome:'Novo modelo', tamanho:'38 × 14 mm', desc:'Descrição', preco:0, figura:'automatico', cor:'#1B3C8F', ativo:true });
   pintarEditor();
+  $('#editor').lastElementChild?.scrollIntoView({ behavior:'smooth', block:'center' });
 });
 
-$('#salvar').addEventListener('click', async () => {
-  await PRECOS.gravar(rascunho);
-  precos = structuredClone(rascunho);
+function aplicar(lista) {
+  produtos = structuredClone(lista);
   pintarModelos();
-  avisar('Preços salvos neste aparelho.');
+  pedido = pedido.filter(i => produtos.some(p => p.id === i.produtoId && p.ativo));
+  pintarPedido();
+}
+
+$('#salvar').addEventListener('click', () => {
+  DADOS.gravarLocal(rascunho);
+  aplicar(rascunho);
+  avisar('Salvo neste aparelho. Para valer para todos, use "Publicar no site".');
 });
 
-$('#restaurar').addEventListener('click', async () => {
-  await PRECOS.limpar();
-  precos = await PRECOS.carregar();
-  rascunho = structuredClone(precos);
-  pintarEditor(); pintarModelos();
-  avisar('Preços de fábrica restaurados.');
+$('#restaurar').addEventListener('click', () => {
+  DADOS.limparLocal();
+  rascunho = structuredClone(PRODUTOS_PADRAO);
+  pintarEditor(); aplicar(rascunho);
+  avisar('Lista de fábrica restaurada.');
 });
 
-$('#publicar').addEventListener('click', () => {
-  const linhas = rascunho.map(p =>
-    `  { id:'${p.id}', nome:'${String(p.nome).replace(/'/g, "\\'")}', desc:'${String(p.desc).replace(/'/g, "\\'")}', preco:${+p.preco || 0}, ativo:${!!p.ativo} }`
-  ).join(',\n');
-  $('#json-precos').value = `const PRECOS_PADRAO = [\n${linhas}\n];`;
-  $('#caixa-publicar').hidden = false;
-  $('#caixa-publicar').scrollIntoView({ behavior:'smooth', block:'nearest' });
+$('#baixar').addEventListener('click', () => {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(rascunho, null, 2)], { type:'application/json' }));
+  const a = Object.assign(document.createElement('a'), { href:url, download:'precos.json' });
+  a.click(); URL.revokeObjectURL(url);
+  avisar('Arquivo baixado. Envie-o ao repositório para publicar.');
 });
 
-$('#copiar-json').addEventListener('click', async () => {
-  avisar(await copiar($('#json-precos').value) ? 'Copiado. Agora cole no index.html.' : 'Selecione o texto e copie manualmente.');
+function status(msg, ok) {
+  const el = $('#status-pub');
+  el.textContent = msg; el.hidden = false;
+  el.className = 'mt-4 text-[14px] font-semibold ' + (ok ? 'text-azul' : 'text-vermelho');
+}
+
+function paraBase64(texto) {
+  const bytes = new TextEncoder().encode(texto);
+  let bin = '';
+  bytes.forEach(b => bin += String.fromCharCode(b));
+  return btoa(bin);
+}
+
+$('#publicar').addEventListener('click', async () => {
+  const token = $('#gh-token').value.trim();
+  if (!token) return status('Informe a chave de acesso do GitHub.', false);
+  if (REPO.usuario === 'SEU-USUARIO-GITHUB') return status('Configure o REPO no início do código (etapa 4 do manual).', false);
+
+  $('#gh-lembrar').checked ? localStorage.setItem('mc.token', token) : localStorage.removeItem('mc.token');
+
+  const url = `https://api.github.com/repos/${REPO.usuario}/${REPO.nome}/contents/${REPO.arquivo}`;
+  const cab = { Authorization:`Bearer ${token}`, Accept:'application/vnd.github+json', 'Content-Type':'application/json' };
+
+  status('Publicando…', true);
+  try {
+    let sha;
+    const atual = await fetch(`${url}?ref=${REPO.branch}`, { headers:cab });
+    if (atual.ok) sha = (await atual.json()).sha;
+    else if (atual.status === 401) return status('Chave inválida ou expirada.', false);
+    else if (atual.status === 404 && !atual.headers.get('x-ratelimit-remaining')) return status('Repositório não encontrado. Confira o REPO no código.', false);
+
+    const r = await fetch(url, {
+      method:'PUT', headers:cab,
+      body: JSON.stringify({
+        message: `Atualiza produtos e preços — ${new Date().toLocaleString('pt-BR')}`,
+        content: paraBase64(JSON.stringify(rascunho, null, 2)),
+        branch: REPO.branch,
+        ...(sha ? { sha } : {})
+      })
+    });
+
+    if (!r.ok) {
+      const erro = await r.json().catch(() => ({}));
+      return status(`Não foi possível publicar (${r.status}). ${erro.message || ''}`, false);
+    }
+
+    DADOS.gravarLocal(rascunho);
+    aplicar(rascunho);
+    status('Publicado. Em cerca de 1 minuto o site já mostra a lista nova para todos.', true);
+  } catch (e) {
+    status('Falha de conexão ao publicar. Verifique a internet e tente de novo.', false);
+  }
 });
 
 /* =============================================================
    7. INÍCIO
    ============================================================= */
 (async function iniciar() {
-  precos = await PRECOS.carregar();
+  produtos = await DADOS.carregar();
   pintarModelos();
   desenhar();
+  pintarPedido();
   rotear();
 })();
 </script>
