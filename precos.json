@@ -20,16 +20,6 @@
     "ativo": true
   },
   {
-    "id": "p3",
-    "nome": "Colop C-20",
-    "tamanho": "38 × 14 mm",
-    "desc": "Automático, até 4 linhas",
-    "preco": 39,
-    "figura": "automatico",
-    "cor": "#1E1E1E",
-    "ativo": true
-  },
-  {
     "id": "p4",
     "nome": "Trodat 4911",
     "tamanho": "38 × 14 mm",
