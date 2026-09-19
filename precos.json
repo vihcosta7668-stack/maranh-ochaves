@@ -60,16 +60,6 @@
     "ativo": true
   },
   {
-    "id": "p8",
-    "nome": "Redondo 40 mm",
-    "tamanho": "40 mm",
-    "desc": "Padrão CNPJ, arcos de texto",
-    "preco": 0,
-    "figura": "redondo",
-    "cor": "#1B3C8F",
-    "ativo": true
-  },
-  {
     "id": "p9",
     "nome": "Carimbo de madeira",
     "tamanho": "sob medida",
