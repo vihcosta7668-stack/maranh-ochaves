@@ -54,7 +54,7 @@
   <div class="bg-amarelo text-azul-900 text-[13px] font-semibold">
     <div class="mx-auto max-w-6xl px-4 py-2 flex items-center justify-between gap-3">
       <p>Chaveiro de plantão · Parauapebas</p>
-      <a href="tel:+5594991827177" class="hover:text-vermelho shrink-0">(94) 99182-7177</a>
+      <p class="shrink-0">Rua A, 529 — Cidade Nova</p>
     </div>
   </div>
 
@@ -63,16 +63,12 @@
       <a href="#" class="mr-auto shrink-0" aria-label="Maranhão Chaves, início">
         <img src="marca.png" alt="Maranhão Chaves — O Rei das Chaves" class="h-11 sm:h-12 w-auto" />
       </a>
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-azul">
-        <a href="#servicos" class="hover:text-vermelho">Serviços</a>
+      <nav class="flex items-center gap-4 sm:gap-6 text-[13px] sm:text-sm font-semibold text-azul">
+        <a href="#servicos" class="hidden sm:inline hover:text-vermelho">Serviços</a>
         <a href="#carimbos" class="hover:text-vermelho">Monte seu carimbo</a>
+        <a href="#empresas" class="hover:text-vermelho">Empresas</a>
         <a href="#contato" class="hover:text-vermelho">Contato</a>
       </nav>
-      <a id="wa-topo" href="#" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-2 rounded-lg bg-azul px-4 py-2.5 text-sm font-bold text-white hover:bg-azul-900">
-        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>
-        WhatsApp
-      </a>
     </div>
   </header>
 
@@ -85,7 +81,6 @@
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a href="#carimbos" class="rounded-lg bg-amarelo px-6 py-3.5 font-bold text-azul-900 hover:bg-amarelo-600">Monte seu carimbo</a>
-          <a id="wa-heroi" href="#" target="_blank" rel="noopener" class="rounded-lg bg-vermelho px-6 py-3.5 font-bold text-white hover:bg-vermelho-700">Falar com a loja</a>
         </div>
       </div>
       <div class="hidden lg:block">
@@ -188,13 +183,97 @@
     </div>
   </section>
 
+  <!-- ===== Empresas ===== -->
+  <section id="empresas" class="mx-auto max-w-6xl px-4 py-16 scroll-mt-20">
+    <div class="rounded-2xl border-2 border-azul overflow-hidden grid lg:grid-cols-[1fr_1.1fr]">
+      <div class="bg-azul text-white p-6 sm:p-8">
+        <span class="inline-block rounded-full bg-amarelo text-azul-900 text-[12px] font-bold px-3 py-1">Para empresas</span>
+        <h2 class="titulo text-2xl sm:text-3xl mt-4">Sua empresa precisa de volume?</h2>
+        <p class="mt-3 text-white/85 leading-relaxed text-[15px]">
+          Atendemos comércios, escritórios, condomínios, transportadoras e obras: carimbos em quantidade, cópias de chave para equipe, chaves codificadas de frota e troca de segredo de fechaduras. Orçamento fechado e nota fiscal.
+        </p>
+        <ul class="mt-5 space-y-2 text-[15px] text-white/85">
+          <li>• Preço por quantidade</li>
+          <li>• Atendimento no local, na sua empresa</li>
+          <li>• Reposição programada para quem usa sempre</li>
+        </ul>
+      </div>
+
+      <div class="p-6 sm:p-8 bg-white">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div><label class="rotulo" for="e-empresa">Empresa</label><input id="e-empresa" class="campo" placeholder="Razão social ou nome fantasia" /></div>
+          <div><label class="rotulo" for="e-resp">Responsável</label><input id="e-resp" class="campo" placeholder="Quem fala com a gente" /></div>
+          <div><label class="rotulo" for="e-contato">Telefone ou e-mail</label><input id="e-contato" class="campo" placeholder="(94) 9 0000-0000" /></div>
+          <div>
+            <label class="rotulo" for="e-tipo">Precisa de</label>
+            <select id="e-tipo" class="campo">
+              <option>Carimbos em quantidade</option>
+              <option>Cópias de chave para a equipe</option>
+              <option>Chaves codificadas de frota</option>
+              <option>Troca de segredo / controle de acesso</option>
+              <option>Contrato de atendimento mensal</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-3"><label class="rotulo" for="e-msg">Detalhes</label><textarea id="e-msg" rows="2" class="campo" placeholder="Ex.: 20 carimbos automáticos com o logo da empresa"></textarea></div>
+
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+          <button id="e-whats" class="flex-1 rounded-lg bg-[#25D366] px-5 py-3.5 font-bold text-white hover:brightness-110">Enviar no WhatsApp</button>
+          <button id="e-email" class="flex-1 rounded-lg border-2 border-azul px-5 py-3.5 font-bold text-azul hover:bg-azul hover:text-white">Enviar por e-mail</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Formas de pagamento ===== -->
+  <section class="bg-gelo border-y border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="titulo text-2xl sm:text-3xl text-azul text-center">Formas de pagamento</h2>
+      <div class="mt-7 grid sm:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+          <svg viewBox="0 0 24 24" class="h-9 w-9 mx-auto text-azul" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></svg>
+          <h3 class="titulo text-lg text-azul mt-3">Cartão</h3>
+          <p class="text-[14px] text-grafite-400 mt-1">Crédito e débito, em até 12x.</p>
+          <div class="mt-4 flex flex-wrap justify-center gap-2">
+            <!-- Bandeiras: substitua por PNG oficial quando tiver (ver manual) -->
+            <svg viewBox="0 0 48 30" class="h-7 w-auto" role="img" aria-label="Visa"><rect width="48" height="30" rx="4" fill="#fff" stroke="#DDE2EA"/><text x="24" y="20" text-anchor="middle" font-family="Archivo" font-size="12" font-weight="800" font-style="italic" fill="#1A1F71">VISA</text></svg>
+            <svg viewBox="0 0 48 30" class="h-7 w-auto" role="img" aria-label="Mastercard"><rect width="48" height="30" rx="4" fill="#fff" stroke="#DDE2EA"/><circle cx="20" cy="15" r="8" fill="#EB001B"/><circle cx="28" cy="15" r="8" fill="#F79E1B" fill-opacity=".85"/></svg>
+            <svg viewBox="0 0 48 30" class="h-7 w-auto" role="img" aria-label="Elo"><rect width="48" height="30" rx="4" fill="#000"/><circle cx="14" cy="11" r="3" fill="#FFCB05"/><circle cx="14" cy="19" r="3" fill="#EF4123"/><text x="30" y="20" text-anchor="middle" font-family="Archivo" font-size="11" font-weight="800" fill="#fff">elo</text></svg>
+            <svg viewBox="0 0 48 30" class="h-7 w-auto" role="img" aria-label="Hipercard"><rect width="48" height="30" rx="4" fill="#B3131B"/><text x="24" y="19" text-anchor="middle" font-family="Archivo" font-size="9" font-weight="800" fill="#fff">Hipercard</text></svg>
+            <svg viewBox="0 0 48 30" class="h-7 w-auto" role="img" aria-label="American Express"><rect width="48" height="30" rx="4" fill="#006FCF"/><text x="24" y="19" text-anchor="middle" font-family="Archivo" font-size="10" font-weight="800" fill="#fff">AMEX</text></svg>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+          <svg viewBox="0 0 24 24" class="h-9 w-9 mx-auto" aria-hidden="true"><path d="M12 3.2 20.8 12 12 20.8 3.2 12z" fill="none" stroke="#32BCAD" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.4 8.4 12 12l3.6-3.6M8.4 15.6 12 12l3.6 3.6" fill="none" stroke="#32BCAD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="titulo text-lg text-azul mt-3">Pix</h3>
+          <p class="text-[14px] text-grafite-400 mt-1">Na hora, com confirmação imediata.</p>
+          <div class="mt-4 flex justify-center">
+            <span class="rounded-lg border border-slate-200 px-3 py-1.5 text-[12px] font-bold text-[#32BCAD]">Pix · aprovação na hora</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+          <svg viewBox="0 0 24 24" class="h-9 w-9 mx-auto text-azul" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>
+          <h3 class="titulo text-lg text-azul mt-3">Dinheiro</h3>
+          <p class="text-[14px] text-grafite-400 mt-1">No balcão da loja.</p>
+          <div class="mt-4 flex justify-center">
+            <span class="rounded-lg border border-slate-200 px-3 py-1.5 text-[12px] font-bold text-grafite-400">Sem taxa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="contato" class="bg-white">
     <div class="dentes"></div>
     <div class="mx-auto max-w-6xl px-4 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div class="sm:col-span-2">
         <img src="marca.png" alt="Maranhão Chaves" class="h-14 w-auto" />
         <p class="mt-4 text-grafite-400 max-w-[46ch] leading-relaxed">Chaves codificadas, cópias, controles de portão e carimbos personalizados. Atendimento no balcão e chaveiro no local.</p>
-        <a id="wa-rodape" href="#" target="_blank" rel="noopener" class="mt-5 inline-flex rounded-lg bg-vermelho px-5 py-3 font-bold text-white hover:bg-vermelho-700">Chamar no WhatsApp</a>
+        <a id="wa-rodape" href="#" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 font-bold text-white hover:brightness-110">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-4-4.6-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3Z"/></svg>
+          Chamar no WhatsApp
+        </a>
       </div>
       <div>
         <h3 class="titulo text-azul text-lg mb-3">Onde estamos</h3>
@@ -204,12 +283,41 @@
         <a href="https://www.google.com/maps/search/?api=1&query=Rua+A+529+Cidade+Nova+Parauapebas+PA" target="_blank" rel="noopener" class="mt-3 inline-block text-vermelho font-bold text-sm hover:underline">Abrir no mapa</a>
       </div>
       <div>
-        <h3 class="titulo text-azul text-lg mb-3">Atendimento</h3>
-        <ul class="text-grafite-400 text-[15px] space-y-1.5">
+        <h3 class="titulo text-azul text-lg mb-3">Fale com a gente</h3>
+        <ul class="text-[15px] space-y-2.5">
+          <li>
+            <a data-ig href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-semibold text-azul hover:text-vermelho">
+              <svg viewBox="0 0 24 24" class="h-[22px] w-[22px] shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#F9CE34"/><stop offset="35%" stop-color="#EE2A7B"/><stop offset="100%" stop-color="#6228D7"/>
+                  </linearGradient>
+                </defs>
+                <rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="url(#ig-grad)" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4.6" fill="none" stroke="url(#ig-grad)" stroke-width="2"/>
+                <circle cx="17.4" cy="6.6" r="1.35" fill="url(#ig-grad)"/>
+              </svg>
+              <span data-ig-nome></span>
+            </a>
+          </li>
+          <li>
+            <a data-email href="#" class="inline-flex items-center gap-2 font-semibold text-azul hover:text-vermelho break-all">
+              <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              <span data-email-nome></span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+5594991827177" class="inline-flex items-center gap-2 font-semibold text-azul hover:text-vermelho">
+              <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h3l1.6 4-2 1.4a12 12 0 0 0 5 5L15 11.4 19 13v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4 5.2 2 2 0 0 1 6 3Z"/></svg>
+              (94) 99182-7177
+            </a>
+          </li>
+        </ul>
+        <h3 class="titulo text-azul text-lg mt-6 mb-2">Horários</h3>
+        <ul class="text-grafite-400 text-[15px] space-y-1">
           <li>Segunda a sexta: 8h às 18h</li>
           <li>Sábado: 8h às 13h</li>
         </ul>
-        <a href="tel:+5594991827177" class="mt-3 inline-block font-bold text-azul hover:text-vermelho">(94) 99182-7177</a>
       </div>
     </div>
     <div class="bg-azul text-white/60">
@@ -315,6 +423,8 @@
 const LOJA = {
   nome: 'Maranhão Chaves',
   whatsapp: '5594991827177',   // número que RECEBE os pedidos
+  instagram: 'maranhao.chaves',        // @ da loja, sem o arroba
+  email: 'maranhaochaves@yahoo.com.br',// e-mail de contato da loja
   donos: ['94991827177'],      // números autorizados na área do dono
   senha: 'maranhao2026'        // trocar antes de publicar
 };
@@ -459,8 +569,44 @@ let modeloId = null;
 let editando = null;   // índice do item em edição
 
 $('#ano').textContent = new Date().getFullYear();
-['#wa-topo','#wa-heroi','#wa-rodape','#wa-flutuante'].forEach(s => {
-  $(s).href = whats('Olá! Vim pelo site do Maranhão Chaves e preciso de um orçamento.');
+['#wa-rodape','#wa-flutuante'].forEach(s => {
+  const el = $(s);
+  if (el) el.href = whats('Olá! Vim pelo site do Maranhão Chaves e preciso de um orçamento.');
+});
+
+$$('[data-ig]').forEach(a => a.href = `https://instagram.com/${LOJA.instagram}`);
+$$('[data-ig-nome]').forEach(el => el.textContent = '@' + LOJA.instagram);
+$$('[data-email]').forEach(a => a.href = 'mailto:' + LOJA.email);
+$$('[data-email-nome]').forEach(el => el.textContent = LOJA.email);
+
+/* --- Contato de empresas --- */
+function mensagemEmpresa() {
+  const l = [
+    '*CONTATO DE EMPRESA — site Maranhão Chaves*', '',
+    `Empresa: ${$('#e-empresa').value.trim()}`,
+    `Responsável: ${$('#e-resp').value.trim()}`,
+    `Contato: ${$('#e-contato').value.trim()}`,
+    `Precisa de: ${$('#e-tipo').value}`
+  ];
+  if ($('#e-msg').value.trim()) l.push('', `Detalhes: ${$('#e-msg').value.trim()}`);
+  return l.join('\n');
+}
+
+function validarEmpresa() {
+  if (!$('#e-empresa').value.trim()) { avisar('Informe o nome da empresa.'); $('#e-empresa').focus(); return false; }
+  if (!$('#e-contato').value.trim()) { avisar('Informe um telefone ou e-mail para retorno.'); $('#e-contato').focus(); return false; }
+  return true;
+}
+
+$('#e-whats').addEventListener('click', () => {
+  if (validarEmpresa()) window.open(whats(mensagemEmpresa()), '_blank');
+});
+
+$('#e-email').addEventListener('click', () => {
+  if (!validarEmpresa()) return;
+  const assunto = `Orçamento para empresa — ${$('#e-empresa').value.trim()}`;
+  const corpo = mensagemEmpresa().replace(/\*/g, '');
+  window.location.href = `mailto:${LOJA.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
 });
 
 $('#lista-servicos').innerHTML = SERVICOS.map(s => `
