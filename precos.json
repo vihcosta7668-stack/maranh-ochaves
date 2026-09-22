@@ -1,72 +1,16 @@
 [
-  {
-    "id": "p1",
-    "nome": "Trodat 3911",
-    "tamanho": "38 × 14 mm",
-    "desc": "Automático, até 4 linhas",
-    "preco": 35,
-    "figura": "automatico",
-    "cor": "#F2F3F5",
-    "ativo": true
-  },
-  {
-    "id": "p2",
-    "nome": "Nykon 302",
-    "tamanho": "38 × 12 mm",
-    "desc": "Automático, até 4 linhas",
-    "preco": 35,
-    "figura": "automatico",
-    "cor": "#F47B20",
-    "ativo": true
-  },
-  {
-    "id": "p4",
-    "nome": "Trodat 4911",
-    "tamanho": "38 × 14 mm",
-    "desc": "Automático reforçado",
-    "preco": 45,
-    "figura": "automatico",
-    "cor": "#D42A20",
-    "ativo": true
-  },
-  {
-    "id": "p5",
-    "nome": "De bolso Colop",
-    "tamanho": "38 × 12 mm",
-    "desc": "Cabe no bolso, várias cores",
-    "preco": 65,
-    "figura": "bolso",
-    "cor": "#6C5CC9",
-    "ativo": true
-  },
-  {
-    "id": "p6",
-    "nome": "De bolso Shiny S-722",
-    "tamanho": "38 × 14 mm",
-    "desc": "Cabe no bolso, várias cores",
-    "preco": 65,
-    "figura": "bolso",
-    "cor": "#E5307E",
-    "ativo": true
-  },
-  {
-    "id": "p7",
-    "nome": "De bolso Nykon",
-    "tamanho": "38 × 14 mm",
-    "desc": "Cabe no bolso, várias cores",
-    "preco": 65,
-    "figura": "bolso",
-    "cor": "#2FA189",
-    "ativo": true
-  },
-  {
-    "id": "p9",
-    "nome": "Carimbo de madeira",
-    "tamanho": "sob medida",
-    "desc": "Cabo de madeira, uso manual",
-    "preco": 0,
-    "figura": "madeira",
-    "cor": "#9B6B3A",
-    "ativo": true
-  }
+  {"id": "p2", "nome": "Nykon 302", "tamanho": "38 × 12 mm", "desc": "Automático", "preco": 35, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p4", "nome": "Trodat 4911 P4", "tamanho": "38 × 14 mm", "desc": "Automático reforçado", "preco": 45, "figura": "automatico", "cor": "#D42A20", "ativo": true},
+  {"id": "p1", "nome": "Trodat 3911", "tamanho": "38 × 14 mm", "desc": "Automático", "preco": 35, "figura": "automatico", "cor": "#F2F3F5", "ativo": true},
+  {"id": "p10", "nome": "Nykon 301", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p11", "nome": "Trodat 4911 P2", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#1E1E1E", "ativo": true},
+  {"id": "p12", "nome": "Nykon 303", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p13", "nome": "Nykon 304", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p14", "nome": "Nykon 355", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p15", "nome": "Nykon 360", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p16", "nome": "Nykon 343", "tamanho": "Sob encomenda", "desc": "Automático — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#F47B20", "ativo": true},
+  {"id": "p17", "nome": "Nykon SI 5280", "tamanho": "Sob encomenda", "desc": "Quadrado ou redondo — valor sob consulta", "preco": 0, "figura": "redondo", "cor": "#F47B20", "ativo": true},
+  {"id": "p18", "nome": "Carimbo datador", "tamanho": "Sob encomenda", "desc": "Data ajustável — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#1B3C8F", "ativo": true},
+  {"id": "p19", "nome": "Carimbo numerador", "tamanho": "Sob encomenda", "desc": "Numeração sequencial — valor sob consulta", "preco": 0, "figura": "automatico", "cor": "#2A2F36", "ativo": true},
+  {"id": "p9", "nome": "Carimbo de madeira", "tamanho": "Sob encomenda", "desc": "Tamanhos variados, quadrados e redondos", "preco": 0, "figura": "madeira", "cor": "#9B6B3A", "ativo": true}
 ]
